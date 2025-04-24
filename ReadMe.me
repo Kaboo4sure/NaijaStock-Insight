@@ -1,0 +1,97 @@
+
+# NaijaStock Insight: Automated Weekly Stock Signal System for the Nigerian Stock Market
+
+**NaijaStock Insight** is an automated system that collects daily stock data from the Nigerian Stock Exchange (NGX), processes the data using machine learning and statistical techniques, and generates weekly BUY signals based on the expected 15-25% growth potential for the next trading week. It utilizes Python, free APIs, SQLite, GitHub Actions, and Tableau Public for end-to-end automation, signal generation, and visualization.
+
+---
+
+## **Project Goals**
+- **Automated Daily Data Collection**: Collects stock data from the NGX without human input.
+- **Historical Stock Data Update**: Appends new stock data to a historical dataset.
+- **Weekly Signal Generation**: Generates and delivers weekly trading signals every Friday at 6 PM WAT.
+- **Data-Driven Metrics for Stock Selection**: Uses machine learning and statistical models to calculate key stock metrics.
+- **Backtesting of Model Strategies**: Validates the performance of trading signals with historical data.
+- **Dashboard for Visualization**: Provides real-time tracking and visualization of stock metrics and signals.
+
+---
+
+## **Technologies Used**
+- **Data Collection**: `yfinance` API (for stock data)
+- **Data Storage**: SQLite (lightweight database), CSV files
+- **Signal Generation & Analysis**: Python (Pandas, NumPy, Scikit-learn, Statsmodels)
+- **Automation**: GitHub Actions (for scheduling and automating tasks)
+- **Visualization**: Tableau Public or Streamlit
+- **Version Control**: GitHub
+- **Notifications**: Email / WhatsApp Bot (optional)
+
+---
+
+## **Features**
+- **Daily Data Collection**: Automated fetch of Nigerian stock data from Yahoo Finance.
+- **Weekly Signal Generation**: Weekly top 10 stock picks based on predicted 15-25% growth potential.
+- **Backtesting**: Simulate trading strategy performance with historical data.
+- **Visualization**: Interactive dashboard with stock metrics, signal confidence, and portfolio tracking.
+- **Notification System**: Option to send trading signals via email or WhatsApp Bot.
+
+---
+
+## **Setup Instructions**
+
+### **1. Clone the Repository**
+Clone the repository to your local machine:
+```bash
+git clone https://github.com/your-username/NaijaStock-Insight.git
+<cd NaijaStock Insight>
+
+## **Setup the virtual environment**
+- <python -m venv naijastock_venv>
+- <naijastock_venv\Scripts\activate>
+
+## ** Install dependencies**
+- <pip install yfinance pandas numpy scikit-learn statsmodels matplotlib webdriver-manager selenium>
+
+## ** Create git ignore and add the folllowing files**
+ - <New-Item .gitignore -ItemType "file">
+ - Copy and add the following:
+*.pyc
+__pycache__/
+naijastock_venv/
+*.db
+*.csv
+
+
+## ** Set up SQLite Database**
+- create a folder: datavase_setup and then add file: create_db.py
+- add the script to create db 
+- run <python create_dn.py>
+
+## ** connect to database for data insertion**
+- create a file fetch_stock_data.py
+- run <python fetch_stock_data.py> to fetch data samples
+
+## Viewing the data**
+- create a file view_data.py
+- add script to the file
+
+
+## Phase 2-
+- Step 1: Signal Logic Implementation
+- to use TA-lib, Microsoft C++ Build Tool is needed. Download and install on your computer
+<https://visualstudio.microsoft.com/visual-cpp-build-tools/>
+
+<pip install TA-Lib>
+- We’ll implement the following stock signal generation logic:
+
+  - Momentum: Check if the stock has a positive 5-day return.
+
+  - RSI: Calculate and check if it’s below 70.
+
+  - MACD: Calculate the MACD and check for a bullish crossover.
+
+   - Volume Spike: Check if today's volume exceeds the 20-day average volume.
+
+- Step 2: Add Signal Score to Data
+- We will add a column signal_score to the DataFrame, which will store the computed score based on the above criteria. A BUY signal is considered if the score is above a certain threshold.
+
+- Step 3: Highlight Buy Signals on the Charts
+- We will modify the chart plotting so that BUY signals are highlighted with a distinct color.
