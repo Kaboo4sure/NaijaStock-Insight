@@ -21,8 +21,8 @@ jobs:
 
     - name: Install system dependencies for TA-Lib
       run: |
-        sudo apt-get install -y libatlas-base-dev
-        python -m pip install ta-lib  # Install TA-Lib if not already available
+        sudo apt-get update
+        sudo apt-get install -y libatlas-base-dev  # Install required system libraries for TA-Lib
 
     - name: Install dependencies
       run: |
