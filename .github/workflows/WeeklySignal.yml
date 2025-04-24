@@ -24,5 +24,9 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt  # Ensure you have pandas, talib, etc., in requirements.txt
 
+    - name: Check dependencies for conflicts
+      run: |
+          pip check  # This will check for dependency conflicts   
+          
     - name: Run signal generation script
       run: python generate_signals.py  # Runs the Python script to generate signals
