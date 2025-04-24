@@ -27,6 +27,6 @@ jobs:
     - name: Check dependencies for conflicts
       run: |
           pip check  # This will check for dependency conflicts   
-          
+
     - name: Run signal generation script
-      run: python generate_signals.py  # Runs the Python script to generate signals
+      run: python database_setup/generate_signals.py  # Runs the Python script to generate signals
