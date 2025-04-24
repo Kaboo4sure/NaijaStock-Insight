@@ -2,36 +2,40 @@ name: Weekly Signal Generation
 
 on:
   schedule:
-    # This will run every Friday at 6 PM WAT (West Africa Time)
-    - cron: '0 18 * * 5'  # Adjust the timing if needed (UTC+1 is 18:00 WAT)
+    - cron: '0 18 * * 5'  # Runs every Friday at 6 PM WAT (UTC+1)
   workflow_dispatch:  # Allows you to manually trigger the workflow if needed
 
 jobs:
   generate-signals:
-    runs-on: ubuntu-latest  # Run on a GitHub-hosted Ubuntu runner
+    runs-on: ubuntu-latest  # Use an Ubuntu runner for GitHub Actions
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2  # Checkout the repository code
+      uses: actions/checkout@v2  # Checkout the repository
 
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        python-version: '3.8'  # You can change to any Python version you need
+        python-version: '3.8'  # You can specify the desired Python version here
 
-    - name: Install system dependencies for TA-Lib
+    - name: Install dependencies with Conda (only on GitHub)
+      if: runner.os == 'Linux'  # Ensure we only run this on Linux (GitHub hosted runner)
       run: |
-        sudo apt-get update
-        sudo apt-get install -y libatlas-base-dev  # Install required system libraries for TA-Lib
+        # Install conda if it's not available
+        curl -sSL https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -o miniconda.sh
+        bash miniconda.sh -b -u
+        source ~/miniconda3/bin/activate
+        conda create --name naijastock_env python=3.8
+        conda activate naijastock_env
+        conda install -c conda-forge ta-lib
+        conda install --file requirements.txt
 
-    - name: Install Python dependencies
+    - name: Install dependencies with pip (for local compatibility)
+      if: runner.os != 'Linux'  # If not using Linux (e.g., Windows, macOS), use pip
       run: |
         python -m pip install --upgrade pip
-        pip install -r requirements.txt  # Install Python dependencies from the requirements file
-
-    - name: Check dependencies for conflicts
-      run: |
-        pip check  # This will check for dependency conflicts    
+        pip install -r requirements.txt  # Use pip to install dependencies
 
     - name: Run signal generation script
-      run: python database_setup/generate_signals.py  # Runs the Python script to generate signals
+      run: |
+        python database_setup/generate_signals.py  # Execute the script to generate signals
