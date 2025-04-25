@@ -25,21 +25,21 @@ jobs:
         path: /usr/local/lib/python3.8/dist-packages/ta-lib  # Adjust path for caching TA-Lib
         key: ${{ runner.os }}-talib-${{ hashFiles('**/ta-lib-0.4.0-src.tar.gz') }}  # Cache key
 
-    - name: Build TA-Lib
+    - name: Build TA-Lib from Source
       if: steps.cache-talib.outputs.cache-hit != 'true'  # Only build if not cached
       run: |
-        curl -L http://prdownloads.sourceforge.net/ta-lib/ta-lib-0.4.0-src.tar.gz -o ta-lib-0.4.0-src.tar.gz
-        tar -xzf ta-lib-0.4.0-src.tar.gz
+        echo "Building TA-Lib from source"
+        # Download TA-Lib source
+        curl -L https://github.com/markeisha/ta-lib/releases/download/v0.4.19/ta-lib-0.4.19-src.tar.gz -o ta-lib-0.4.19-src.tar.gz
+        tar -xvzf ta-lib-0.4.19-src.tar.gz
         cd ta-lib
+        # Build TA-Lib
         ./configure --prefix=/usr
         make
-
-    - name: Install TA-Lib
-      run: |
-        cd ta-lib
         sudo make install
+        echo "TA-Lib installed successfully"
 
-    - name: Install dependencies
+    - name: Install Python dependencies
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt  # Install dependencies from requirements.txt
