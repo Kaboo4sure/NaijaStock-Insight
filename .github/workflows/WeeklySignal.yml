@@ -34,12 +34,13 @@ jobs:
         cd ta-lib
         ./configure --prefix=/usr
         make
-
-    - name: Install TA-Lib
-      run: |
-        cd ta-lib
         sudo make install
         echo "TA-Lib installed successfully"
+
+    - name: Install Python bindings for TA-Lib
+      run: |
+        # Install the Python bindings for TA-Lib
+        pip install ta-lib
 
     - name: Install dependencies
       run: |
