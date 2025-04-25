@@ -39,8 +39,7 @@ jobs:
 
     - name: Set LD_LIBRARY_PATH for TA-Lib
       run: |
-        echo "Setting LD_LIBRARY_PATH"
-        echo "/usr/lib" >> $GITHUB_ENV  # Ensure the library is in the linker search path
+        echo "/usr/lib" >> $GITHUB_ENV  # Correctly append to environment variable
 
     - name: Install Python bindings for TA-Lib
       run: |
