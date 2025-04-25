@@ -14,15 +14,15 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Set up Python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v2  # Ensure using the latest v2 version
       with:
         python-version: '3.8'
 
     - name: Cache TA-Lib
       id: cache-talib
-      uses: actions/cache@v2
+      uses: actions/cache@v3  # Use the latest v3 for the cache action
       with:
-        path: /usr/local/lib/python3.8/dist-packages/ta-lib  # This caches the installed TA-Lib
+        path: /usr/local/lib/python3.8/dist-packages/ta-lib  # Adjust path for caching TA-Lib
         key: ${{ runner.os }}-talib-${{ hashFiles('**/ta-lib-0.4.0-src.tar.gz') }}  # Cache key
 
     - name: Build TA-Lib
