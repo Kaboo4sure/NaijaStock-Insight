@@ -39,7 +39,7 @@ jobs:
 
     - name: Set LD_LIBRARY_PATH for TA-Lib
       run: |
-        echo "/usr/lib" >> $GITHUB_ENV  # Correctly append to environment variable
+        echo "LD_LIBRARY_PATH=/usr/lib" >> $GITHUB_ENV  # Set the LD_LIBRARY_PATH in the GitHub Actions environment
 
     - name: Install Python bindings for TA-Lib
       run: |
