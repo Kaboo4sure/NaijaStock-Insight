@@ -20,7 +20,7 @@ jobs:
 
     - name: Cache TA-Lib
       id: cache-talib
-      uses: actions/cache@v3
+      uses: actions/cache@v3  # Using latest v3 for cache
       with:
         path: /usr/local/lib/python3.8/dist-packages/ta-lib
         key: ${{ runner.os }}-talib-${{ hashFiles('**/ta-lib-0.4.0-src.tar.gz') }}  # Cache key based on source
@@ -39,11 +39,10 @@ jobs:
           echo "TA-Lib is already installed"
         fi
 
-    - name: Install Python dependencies
+    - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
-        pip install ta-lib  # Install the Python wrapper for TA-Lib
 
     - name: Run signal generation script
       run: python database_setup/generate_signals.py
