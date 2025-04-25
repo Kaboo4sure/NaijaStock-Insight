@@ -37,9 +37,11 @@ jobs:
         sudo make install
         echo "TA-Lib installed successfully"
 
-    - name: Set LD_LIBRARY_PATH for TA-Lib
+    - name: Set up environment variables for TA-Lib
       run: |
-        echo "LD_LIBRARY_PATH=/usr/lib" >> $GITHUB_ENV  # Set the LD_LIBRARY_PATH in the GitHub Actions environment
+        echo "Setting LD_LIBRARY_PATH and PKG_CONFIG_PATH"
+        echo "LD_LIBRARY_PATH=/usr/lib" >> $GITHUB_ENV
+        echo "PKG_CONFIG_PATH=/usr/lib/pkgconfig" >> $GITHUB_ENV
 
     - name: Install Python bindings for TA-Lib
       run: |
