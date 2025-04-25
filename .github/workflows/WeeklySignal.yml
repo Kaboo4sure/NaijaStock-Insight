@@ -1,17 +1,17 @@
-name: Weekly Signal Generation
+name: Build and Cache TA-Lib
 
 on:
   schedule:
-    - cron: '0 18 * * 5'  # Runs every Friday at 6 PM WAT (UTC+1)
-  workflow_dispatch:  # Allows you to manually trigger the workflow if needed
+    - cron: '0 18 * * 5'  # Run every Friday at 6 PM (WAT)
+  workflow_dispatch:  # Manually trigger the workflow if needed
 
 jobs:
-  generate-signals:
-    runs-on: ubuntu-latest  # Use an Ubuntu runner for GitHub Actions
+  build:
+    runs-on: ubuntu-latest
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2  # Checkout the repository
+      uses: actions/checkout@v2
 
     - name: Set up Python
       uses: actions/setup-python@v2
@@ -22,31 +22,27 @@ jobs:
       id: cache-talib
       uses: actions/cache@v2
       with:
-        path: ta-lib  # Cache the downloaded TA-Lib source files
-        key: ${{ runner.os }}-talib  # Key to identify cache (e.g., by operating system)
+        path: /usr/local/lib/python3.8/dist-packages/ta-lib  # This caches the installed TA-Lib
+        key: ${{ runner.os }}-talib-${{ hashFiles('**/ta-lib-0.4.0-src.tar.gz') }}  # Cache key
 
     - name: Build TA-Lib
-      if: steps.cache-talib.outputs.cache-hit != 'true'  # Only build if the cache is not found
+      if: steps.cache-talib.outputs.cache-hit != 'true'  # Only build if not cached
       run: |
-        curl -L http://prdownloads.sourceforge.net/ta-lib/ta-lib-0.4.0-src.tar.gz -o ta-lib-0.4.0-src.tar.gz  # Download the TA-Lib source
-        tar -xzf ta-lib-0.4.0-src.tar.gz  # Extract the source tarball
+        curl -L http://prdownloads.sourceforge.net/ta-lib/ta-lib-0.4.0-src.tar.gz -o ta-lib-0.4.0-src.tar.gz
+        tar -xzf ta-lib-0.4.0-src.tar.gz
         cd ta-lib
-        ./configure --prefix=/usr  # Configure installation
-        make  # Compile the library
+        ./configure --prefix=/usr
+        make
 
     - name: Install TA-Lib
       run: |
         cd ta-lib
-        sudo make install  # Install the compiled TA-Lib
+        sudo make install
 
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install -r requirements.txt  # Install all dependencies from requirements.txt
-
-    - name: Check dependencies for conflicts
-      run: |
-          pip check  # This will check for dependency conflicts
+        pip install -r requirements.txt
 
     - name: Run signal generation script
-      run: python database_setup/generate_signals.py  # Run the signal generation script
+      run: python database_setup/generate_signals.py
