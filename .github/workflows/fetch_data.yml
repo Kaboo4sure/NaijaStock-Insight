@@ -1,0 +1,26 @@
+name: Daily Stock Data Fetcher
+
+on:
+  schedule:
+    - cron: '0 17 * * 1-5'  # Mon–Fri at 6PM WAT (WAT is UTC+1)
+  workflow_dispatch:
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+
+    - name: Run stock data fetch script
+      run: python database_setup/fetch_data.py
