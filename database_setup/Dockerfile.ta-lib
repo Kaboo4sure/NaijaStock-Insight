@@ -1,9 +1,9 @@
 FROM python:3.8-slim
 
-# Install dependencies
+# Install system dependencies required to build TA-Lib
 RUN apt-get update && apt-get install -y \
-    wget \
     build-essential \
+    wget \
     gcc \
     make \
     autoconf \
@@ -11,24 +11,28 @@ RUN apt-get update && apt-get install -y \
     pkg-config \
     && rm -rf /var/lib/apt/lists/*
 
-# Build and install TA-Lib
+# Set working directory
 WORKDIR /tmp
+
+# Download and build the TA-Lib C library
 RUN wget http://prdownloads.sourceforge.net/ta-lib/ta-lib-0.4.0-src.tar.gz && \
     tar -xvzf ta-lib-0.4.0-src.tar.gz && \
     cd ta-lib && \
-    ./configure --prefix=/usr/local && \
+    ./configure --prefix=/usr && \
     make && \
-    make install && \
-    cd .. && rm -rf ta-lib*
+    make install
 
-# Link TA-Lib shared library to /usr/lib so it's found by ld
-RUN ln -s /usr/local/lib/libta_lib.so /usr/lib/libta_lib.so
+# Add library path to linker config and reload
+RUN echo "/usr/lib" >> /etc/ld.so.conf.d/ta-lib.conf && ldconfig
 
-# Set compiler and linker flags explicitly
-ENV CFLAGS="-I/usr/local/include"
-ENV LDFLAGS="-L/usr/local/lib"
+# Ensure library is findable
+RUN ls -l /usr/lib/libta_lib*
+
+# Set environment variables for compiler
+ENV CFLAGS="-I/usr/include"
+ENV LDFLAGS="-L/usr/lib"
 
 # Install Python packages
-RUN pip install --upgrade pip && \
-    pip install numpy && \
-    pip install ta-lib
+RUN pip install --upgrade pip
+RUN pip install numpy
+RUN pip install ta-lib
