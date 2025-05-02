@@ -1,38 +1,20 @@
+# Dockerfile.ta-pandas
 FROM python:3.8-slim
 
-# Install system dependencies required to build TA-Lib
+# Install system dependencies
 RUN apt-get update && apt-get install -y \
     build-essential \
-    wget \
-    gcc \
-    make \
-    autoconf \
-    libtool \
-    pkg-config \
     && rm -rf /var/lib/apt/lists/*
 
-# Set working directory
-WORKDIR /tmp
+# Set work directory
+WORKDIR /app
 
-# Download and build the TA-Lib C library
-RUN wget http://prdownloads.sourceforge.net/ta-lib/ta-lib-0.4.0-src.tar.gz && \
-    tar -xvzf ta-lib-0.4.0-src.tar.gz && \
-    cd ta-lib && \
-    ./configure --prefix=/usr && \
-    make && \
-    make install
+# Copy only the necessary files
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
 
-# Add library path to linker config and reload
-RUN echo "/usr/lib" >> /etc/ld.so.conf.d/ta-lib.conf && ldconfig
+# Copy the rest of your application
+COPY . .
 
-# Ensure library is findable
-RUN ls -l /usr/lib/libta_lib*
-
-# Set environment variables for compiler
-ENV CFLAGS="-I/usr/include"
-ENV LDFLAGS="-L/usr/lib"
-
-# Install Python packages
-RUN pip install --upgrade pip
-RUN pip install numpy
-RUN pip install ta-lib
+# Default command (optional, for testing)
+CMD ["python", "database_setup/generate_signals.py"]

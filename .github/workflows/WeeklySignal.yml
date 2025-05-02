@@ -1,4 +1,6 @@
-name: Run TA-Lib Signal Generator with Custom Dockerfile
+# .github/workflows/run-signals.yml
+
+name: Run Signal Generator with pandas-ta
 
 on:
   workflow_dispatch:
@@ -13,11 +15,10 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    - name: Build Docker image with TA-Lib
+    - name: Build Docker image
       run: |
-        docker build -f database_setup/Dockerfile.ta-lib -t talib-env .
+        docker build -f database_setup/Dockerfile.ta-pandas -t signal-env .
 
-    - name: Run signal generation inside TA-Lib container
+    - name: Run signal generation inside container
       run: |
-        docker run --rm -v ${{ github.workspace }}:/app -w /app talib-env \
-          bash -c "pip install -r requirements.txt && python database_setup/generate_signals.py"
+        docker run --rm -v ${{ github.workspace }}:/app -w /app signal-env
