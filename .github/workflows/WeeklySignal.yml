@@ -9,7 +9,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     container:
-      image: alphalensio/ta-lib:latest  # Includes TA-Lib C lib + Python bindings preinstalled
+      image: mementum/ta-lib-python:latest  # Public Docker Hub image with TA-Lib
 
     steps:
     - name: Checkout code
