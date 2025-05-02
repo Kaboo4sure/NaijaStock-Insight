@@ -1,24 +1,23 @@
-name: Run Signal Generation with TA-Lib
+name: Run TA-Lib Signal Generator with Custom Dockerfile
 
 on:
+  workflow_dispatch:
   schedule:
     - cron: '0 18 * * 5'  # Every Friday at 6 PM WAT
-  workflow_dispatch:  # Manual trigger
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    container:
-      image: mementum/ta-lib-python:latest  # Public Docker Hub image with TA-Lib
 
     steps:
-    - name: Checkout code
+    - name: Checkout repository
       uses: actions/checkout@v4
 
-    - name: Upgrade pip and install requirements
+    - name: Build Docker image with TA-Lib
       run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
+        docker build -f database_setup/Dockerfile.ta-lib -t talib-env .
 
-    - name: Run signal generation script
-      run: python database_setup/generate_signals.py
+    - name: Run signal generation inside TA-Lib container
+      run: |
+        docker run --rm -v ${{ github.workspace }}:/app -w /app talib-env \
+          bash -c "pip install -r requirements.txt && python database_setup/generate_signals.py"
