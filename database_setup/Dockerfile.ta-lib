@@ -1,23 +1,23 @@
 FROM python:3.8-slim
 
-# Install build dependencies
+# Install system and build dependencies
 RUN apt-get update && \
-    apt-get install -y wget build-essential automake autoconf libtool pkg-config && \
+    apt-get install -y build-essential wget automake autoconf libtool pkg-config && \
     rm -rf /var/lib/apt/lists/*
 
-# Build and install TA-Lib from source
+# Download and install TA-Lib C library
 RUN wget http://prdownloads.sourceforge.net/ta-lib/ta-lib-0.4.0-src.tar.gz && \
     tar -xvzf ta-lib-0.4.0-src.tar.gz && \
     cd ta-lib && \
-    ./configure --prefix=/usr/local && \
+    ./configure --prefix=/usr && \
     make && \
     make install && \
     cd .. && rm -rf ta-lib*
 
-# Set env vars for linker/compiler
-ENV LD_LIBRARY_PATH=/usr/local/lib
-ENV LIBRARY_PATH=/usr/local/lib
-ENV CPATH=/usr/local/include
+# Set environment variables so Python can find TA-Lib C library
+ENV LD_LIBRARY_PATH=/usr/lib:/usr/local/lib
+ENV CFLAGS=-I/usr/include
+ENV LDFLAGS=-L/usr/lib
 
-# Install Python bindings
+# Install Python packages (TA-Lib will now compile successfully)
 RUN pip install --no-cache-dir numpy ta-lib
