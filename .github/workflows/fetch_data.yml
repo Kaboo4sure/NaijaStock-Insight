@@ -23,4 +23,4 @@ jobs:
         pip install -r requirements.txt
 
     - name: Run stock data fetch script
-      run: python database_setup/fetch_data.py
+      run: python database_setup/fetch_stock_data.py
