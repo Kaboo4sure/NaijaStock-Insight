@@ -1,23 +1,36 @@
 FROM python:3.8-slim
 
-# Install system and build dependencies
+# Install build dependencies
 RUN apt-get update && \
-    apt-get install -y build-essential wget automake autoconf libtool pkg-config && \
-    rm -rf /var/lib/apt/lists/*
+    apt-get install -y \
+        wget \
+        build-essential \
+        automake \
+        autoconf \
+        libtool \
+        pkg-config \
+        gcc \
+        g++ \
+        make \
+        && rm -rf /var/lib/apt/lists/*
 
-# Download and install TA-Lib C library
+# Download and build TA-Lib C library
+WORKDIR /tmp
 RUN wget http://prdownloads.sourceforge.net/ta-lib/ta-lib-0.4.0-src.tar.gz && \
     tar -xvzf ta-lib-0.4.0-src.tar.gz && \
     cd ta-lib && \
-    ./configure --prefix=/usr && \
+    ./configure --prefix=/usr/local && \
     make && \
     make install && \
     cd .. && rm -rf ta-lib*
 
-# Set environment variables so Python can find TA-Lib C library
-ENV LD_LIBRARY_PATH=/usr/lib:/usr/local/lib
-ENV CFLAGS=-I/usr/include
-ENV LDFLAGS=-L/usr/lib
+# Set environment variables to ensure Python sees TA-Lib
+ENV TA_LIBRARY_PATH="/usr/local/lib"
+ENV TA_INCLUDE_PATH="/usr/local/include"
+ENV LD_LIBRARY_PATH="/usr/local/lib"
+ENV CPATH="/usr/local/include"
+ENV LIBRARY_PATH="/usr/local/lib"
 
-# Install Python packages (TA-Lib will now compile successfully)
-RUN pip install --no-cache-dir numpy ta-lib
+# Install Python bindings
+RUN pip install --no-cache-dir numpy && \
+    pip install --no-cache-dir ta-lib
