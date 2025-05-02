@@ -1,9 +1,9 @@
 FROM python:3.8-slim
 
-# Install dependencies
+# Install system dependencies
 RUN apt-get update && apt-get install -y \
-    wget \
     build-essential \
+    wget \
     gcc \
     make \
     autoconf \
@@ -11,21 +11,22 @@ RUN apt-get update && apt-get install -y \
     pkg-config \
     && rm -rf /var/lib/apt/lists/*
 
-# Download and build TA-Lib C library
+# Build and install TA-Lib C library
 WORKDIR /tmp
 RUN wget http://prdownloads.sourceforge.net/ta-lib/ta-lib-0.4.0-src.tar.gz && \
-    tar -xzvf ta-lib-0.4.0-src.tar.gz && \
+    tar -xvzf ta-lib-0.4.0-src.tar.gz && \
     cd ta-lib && \
     ./configure --prefix=/usr && \
     make && \
     make install && \
     cd .. && rm -rf ta-lib*
 
-# Set environment variables so linker can find the TA-Lib shared library
-ENV LD_LIBRARY_PATH="/usr/lib"
-ENV CPATH="/usr/include"
+# Set paths so the linker and compiler find TA-Lib headers and libraries
+ENV LD_LIBRARY_PATH=/usr/lib
+ENV CFLAGS="-I/usr/include"
+ENV LDFLAGS="-L/usr/lib"
 
-# Install Python dependencies
+# Install Python packages
 RUN pip install --upgrade pip && \
     pip install numpy && \
     pip install ta-lib
