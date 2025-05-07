@@ -37,11 +37,16 @@
 
 ## **Setup Instructions**
 
+- To run the job, python 3.11 is required.
+
 ### **1. Clone the Repository**
 Clone the repository to your local machine:
 ```bash
 git clone https://github.com/your-username/NaijaStock-Insight.git
 <cd NaijaStock Insight>
+
+## Removing old venv
+run <Remove-Item -Recurse -Force naijastock_venv>
 
 ## **Setup the virtual environment**
 - <python -m venv naijastock_venv>
@@ -49,6 +54,9 @@ git clone https://github.com/your-username/NaijaStock-Insight.git
 
 ## ** Install dependencies**
 - <pip install yfinance pandas numpy scikit-learn statsmodels matplotlib webdriver-manager selenium>
+
+## **installing requirement**
+- <pip install -r requirements.txt>
 
 ## ** Create git ignore and add the folllowing files**
  - <New-Item .gitignore -ItemType "file">
@@ -61,13 +69,23 @@ naijastock_venv/
 
 
 ## ** Set up SQLite Database**
-- create a folder: datavase_setup and then add file: create_db.py
+- create a folder: database_setup and then add file: create_db.py
 - add the script to create db 
-- run <python create_dn.py>
+- run <python create_db.py>
 
 ## ** connect to database for data insertion**
 - create a file fetch_stock_data.py
 - run <python fetch_stock_data.py> to fetch data samples
+
+## **Fetch stock data**
+- Create a file in database_setup: fetch_stock_data.py
+- Copy the script to fetch the data from NGX into the file created above
+- run <python fetch_stock_data.py>
+
+## ** Generate signal**
+- Create a file in database_setup: generate_signal.py
+- Copy the script to generate the date fetched ealier for signal creation
+- run <python generate_signal.py>
 
 ## Viewing the data**
 - create a file view_data.py
