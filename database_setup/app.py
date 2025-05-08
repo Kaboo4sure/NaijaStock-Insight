@@ -72,6 +72,14 @@ if 'ticker' in stock_df.columns:
                     'date', 'RSI', 'macd', 'macdsignal',
                     'five_day_return', 'volume_spike', 'signal_score'
                 ]])
+                
+                csv = latest_signals.to_csv(index=False)
+                st.download_button(
+                    label="⬇️ Download Filtered Signals as CSV",
+                    data=csv,
+                    file_name=f"{selected_ticker}_signals.csv",
+                    mime='text/csv'
+                 )
 
                 # 📉 RSI chart
                 st.write("📉 RSI Trend")
