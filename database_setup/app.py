@@ -1,13 +1,16 @@
 import streamlit as st
 import pandas as pd
 import sqlite3
+import os
 
 # Set page config
 st.set_page_config(page_title="NaijaStock Insight", layout="wide")
 st.title("📊 NaijaStock Insight Dashboard")
 
-# Connect to DB
-conn = sqlite3.connect("naijastock.db")
+# Dynamically resolve DB path (works both locally and on Streamlit Cloud)
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DB_PATH = os.path.join(BASE_DIR, "naijastock.db")
+conn = sqlite3.connect(DB_PATH)
 
 # Load stock data
 try:
@@ -43,7 +46,7 @@ if 'ticker' in stock_df.columns:
             # Show signal breakdown
             st.write("🔍 Signal Breakdown (Latest):")
             last = filtered_signals.sort_values('date', ascending=False).head(1)
-            st.dataframe(last[[
+            st.dataframe(last[[ 
                 'date', 'RSI', 'macd', 'macdsignal',
                 'five_day_return', 'volume_spike', 'signal_score'
             ]])
