@@ -44,27 +44,50 @@ if 'ticker' in stock_df.columns:
             filtered_signals['date'] = pd.to_datetime(filtered_signals['date'], errors='coerce')
             latest_signals = filtered_signals.sort_values('date')
 
-            # Show last 10 signals
-            st.dataframe(latest_signals.tail(10)[[
-                'date', 'RSI', 'macd', 'macdsignal',
-                'five_day_return', 'volume_spike', 'signal_score'
-            ]])
+            # 🔍 Filters
+            col1, col2 = st.columns(2)
+            with col1:
+                show_only_buy = st.checkbox("✅ Show only BUY signals (score = 1)")
+            with col2:
+                min_date = latest_signals['date'].min()
+                max_date = latest_signals['date'].max()
+                date_range = st.date_input("📅 Select Date Range", [min_date, max_date])
 
-            # 📉 RSI chart
-            st.write("📉 RSI Trend")
-            st.line_chart(latest_signals.set_index('date')['RSI'])
+            # Apply filters
+            if show_only_buy:
+                latest_signals = latest_signals[latest_signals['signal_score'] == 1]
 
-            # 📉 MACD vs Signal
-            st.write("📉 MACD vs Signal Line")
-            macd_chart = latest_signals.set_index('date')[['macd', 'macdsignal']]
-            st.line_chart(macd_chart)
+            if len(date_range) == 2:
+                start_date, end_date = date_range
+                latest_signals = latest_signals[
+                    (latest_signals['date'] >= pd.to_datetime(start_date)) &
+                    (latest_signals['date'] <= pd.to_datetime(end_date))
+                ]
 
-            # 🔁 Volume Spike
-            st.write("🔁 Volume Spike (1 = True, 0 = False)")
-            vol_df = latest_signals[['date', 'volume_spike']].copy()
-            vol_df['volume_spike'] = vol_df['volume_spike'].astype(int)
-            vol_df = vol_df.set_index('date')
-            st.bar_chart(vol_df)
+            # Display after filtering
+            if latest_signals.empty:
+                st.info(f"No signals match your filter for {selected_ticker}.")
+            else:
+                st.dataframe(latest_signals.tail(10)[[
+                    'date', 'RSI', 'macd', 'macdsignal',
+                    'five_day_return', 'volume_spike', 'signal_score'
+                ]])
+
+                # 📉 RSI chart
+                st.write("📉 RSI Trend")
+                st.line_chart(latest_signals.set_index('date')['RSI'])
+
+                # 📉 MACD vs Signal
+                st.write("📉 MACD vs Signal Line")
+                macd_chart = latest_signals.set_index('date')[['macd', 'macdsignal']]
+                st.line_chart(macd_chart)
+
+                # 🔁 Volume Spike
+                st.write("🔁 Volume Spike (1 = True, 0 = False)")
+                vol_df = latest_signals[['date', 'volume_spike']].copy()
+                vol_df['volume_spike'] = vol_df['volume_spike'].astype(int)
+                vol_df = vol_df.set_index('date')
+                st.bar_chart(vol_df)
 
     except Exception as e:
         st.warning(f"⚠️ Signals table could not be loaded: {e}")
