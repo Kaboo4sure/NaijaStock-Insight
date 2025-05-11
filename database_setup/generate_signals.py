@@ -2,17 +2,23 @@ import pandas_ta as ta
 import pandas as pd
 
 def generate_signals(df):
-    # Ensure 'date' column is in datetime format
+    # ✅ 1. Standardize column names (optional but safer)
+    df.columns = df.columns.str.lower()
+
+    # ✅ 2. Ensure required columns exist
+    required_cols = ['date', 'close', 'volume']
+    for col in required_cols:
+        if col not in df.columns:
+            raise ValueError(f"Missing required column: {col}")
+
+    # ✅ 3. Convert 'date' to datetime
     df['date'] = pd.to_datetime(df['date'], errors='coerce')
     df = df.dropna(subset=['date'])
 
-    # Calculate 5-day return (Momentum)
+    # ✅ 4. Technical indicators
     df['five_day_return'] = df['close'].pct_change(5) * 100
-
-    # Calculate RSI (Relative Strength Index)
     df['RSI'] = ta.rsi(df['close'], length=14)
 
-    # Calculate MACD (Moving Average Convergence Divergence)
     macd = ta.macd(df['close'], fast=12, slow=26, signal=9)
     if macd is not None:
         df['macd'] = macd['MACD_12_26_9']
@@ -21,11 +27,10 @@ def generate_signals(df):
     else:
         df['macd'] = df['macdsignal'] = df['macdhist'] = float('nan')
 
-    # Calculate Volume Spike (compare today's volume with the 20-day average)
     df['twenty_day_avg_volume'] = df['volume'].rolling(window=20).mean()
     df['volume_spike'] = df['volume'] > df['twenty_day_avg_volume']
 
-    # Generate Signal Score
+    # ✅ 5. Signal generation rule
     df['signal_score'] = 0
     df.loc[
         (df['five_day_return'] > 0) &
@@ -33,9 +38,15 @@ def generate_signals(df):
         (df['macd'] > df['macdsignal']) &
         (df['volume_spike'] == True),
         'signal_score'
-    ] = 1  # 1 indicates a BUY signal
+    ] = 1  # BUY signal
 
-    # Print last few signal scores for verification
-    print(df[['date', 'ticker', 'signal_score']].tail())
+    # ✅ 6. Final cleanup (optional: reset index if needed)
+    df.reset_index(drop=True, inplace=True)
+
+    # ✅ 7. Print tail for verification
+    if 'ticker' in df.columns:
+        print(df[['date', 'ticker', 'signal_score']].tail())
+    else:
+        print(df[['date', 'signal_score']].tail())
 
     return df
