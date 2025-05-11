@@ -1,21 +1,18 @@
-import pandas_ta as ta
 import pandas as pd
+import pandas_ta as ta
+import sqlite3
 
 def generate_signals(df):
-    # ✅ 1. Standardize column names (optional but safer)
     df.columns = df.columns.str.lower()
-
-    # ✅ 2. Ensure required columns exist
     required_cols = ['date', 'close', 'volume']
     for col in required_cols:
         if col not in df.columns:
             raise ValueError(f"Missing required column: {col}")
 
-    # ✅ 3. Convert 'date' to datetime
     df['date'] = pd.to_datetime(df['date'], errors='coerce')
     df = df.dropna(subset=['date'])
+    df = df.sort_values(by=['ticker', 'date']) if 'ticker' in df.columns else df.sort_values(by='date')
 
-    # ✅ 4. Technical indicators
     df['five_day_return'] = df['close'].pct_change(5) * 100
     df['RSI'] = ta.rsi(df['close'], length=14)
 
@@ -30,7 +27,6 @@ def generate_signals(df):
     df['twenty_day_avg_volume'] = df['volume'].rolling(window=20).mean()
     df['volume_spike'] = df['volume'] > df['twenty_day_avg_volume']
 
-    # ✅ 5. Signal generation rule
     df['signal_score'] = 0
     df.loc[
         (df['five_day_return'] > 0) &
@@ -38,15 +34,29 @@ def generate_signals(df):
         (df['macd'] > df['macdsignal']) &
         (df['volume_spike'] == True),
         'signal_score'
-    ] = 1  # BUY signal
+    ] = 1
 
-    # ✅ 6. Final cleanup (optional: reset index if needed)
     df.reset_index(drop=True, inplace=True)
 
-    # ✅ 7. Print tail for verification
     if 'ticker' in df.columns:
         print(df[['date', 'ticker', 'signal_score']].tail())
     else:
         print(df[['date', 'signal_score']].tail())
 
     return df
+
+
+# 🔁 NEW: Load from stock_data, generate signals, save to weekly_signals
+if __name__ == "__main__":
+    db_path = "naijastock.db"
+    conn = sqlite3.connect(db_path)
+
+    try:
+        stock_df = pd.read_sql("SELECT * FROM stock_data", conn)
+        signal_df = generate_signals(stock_df)
+        signal_df.to_sql("weekly_signals", conn, if_exists="replace", index=False)
+        print(f"✅ weekly_signals table created with {len(signal_df)} rows.")
+    except Exception as e:
+        print(f"❌ Error: {e}")
+    finally:
+        conn.close()
