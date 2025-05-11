@@ -7,6 +7,19 @@ import sqlite3
 import pandas as pd
 import time
 
+# Helper functions to handle '--' and other bad formats
+def parse_float(value):
+    try:
+        return float(value.replace(',', ''))
+    except:
+        return 0.0
+
+def parse_int(value):
+    try:
+        return int(value.replace(',', ''))
+    except:
+        return 0
+
 # Step 1: Initialize Chrome WebDriver in headless mode
 chrome_options = Options()
 chrome_options.add_argument("--headless")
@@ -64,22 +77,18 @@ while True:
     for tr in table.find_elements(By.TAG_NAME, 'tr')[1:]:
         cells = tr.find_elements(By.TAG_NAME, 'td')
         if len(cells) >= 11:
-            try:
-                company_name = cells[0].text.strip()
-                open_price = float(cells[2].text.strip().replace(',', '') or 0)
-                high_price = float(cells[3].text.strip().replace(',', '') or 0)
-                low_price = float(cells[4].text.strip().replace(',', '') or 0)
-                close_price = float(cells[5].text.strip().replace(',', '') or 0)
-                volume_text = cells[8].text.strip().replace(',', '')
-                volume = int(volume_text) if volume_text and volume_text.isdigit() else 0
-                trade_date = cells[10].text.strip()
-                ticker = company_name.split()[0]  # Fallback if no separate ticker column
+            company_name = cells[0].text.strip()
+            open_price = parse_float(cells[2].text.strip())
+            high_price = parse_float(cells[3].text.strip())
+            low_price = parse_float(cells[4].text.strip())
+            close_price = parse_float(cells[5].text.strip())
+            volume = parse_int(cells[8].text.strip())
+            trade_date = cells[10].text.strip()
+            ticker = company_name.split()[0]  # fallback logic
 
-                all_rows.append([
-                    trade_date, ticker, company_name, open_price, high_price, low_price, close_price, volume
-                ])
-            except Exception as e:
-                print(f"❌ Failed to parse row: {e}")
+            all_rows.append([
+                trade_date, ticker, company_name, open_price, high_price, low_price, close_price, volume
+            ])
 
     if is_next_button_disabled():
         print("Reached last page.")
@@ -113,7 +122,7 @@ def store_data_in_db():
 
     conn.commit()
     conn.close()
-    print("✅ Data stored successfully in naijastock.db")
+    print(f"✅ {len(all_rows)} rows saved to naijastock.db")
 
 store_data_in_db()
 driver.quit()
