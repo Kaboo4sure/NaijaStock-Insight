@@ -1,128 +1,150 @@
 import streamlit as st
 import pandas as pd
 import sqlite3
-import plotly.express as px
-from generate_signals import generate_signals
 import os
+import plotly.express as px
 
-# -------------------------------
-# 🔧 Page Config
-# -------------------------------
+# Set page config
 st.set_page_config(page_title="NaijaStock Insight", layout="wide")
 st.title("📊 NaijaStock Insight Dashboard")
 
-# -------------------------------
-# 📥 Load Data from SQLite
-# -------------------------------
-@st.cache_data
-def load_data():
-    conn = sqlite3.connect("naijastock.db")
-    df = pd.read_sql("SELECT * FROM stock_data", conn, parse_dates=["date"])
-    conn.close()
-    
-    # Standardize column names
-    df.columns = df.columns.str.lower()
-    df = df.rename(columns={
-        'ticker': 'company',
-        'date': 'datetime',
-        'close': 'close',
-        'volume': 'volume'
-    })
-    
-    return generate_signals(df)
+# Dynamically resolve DB path
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DB_PATH = os.path.join(BASE_DIR, "naijastock.db")
 
-df = load_data()
-latest_date = df['datetime'].max()
+# Load stock data
+try:
+    conn = sqlite3.connect(DB_PATH)
+    stock_df = pd.read_sql("SELECT * FROM stock_data", conn)
+    signals_df = pd.read_sql("SELECT * FROM weekly_signals", conn)
+except Exception as e:
+    st.error(f"❌ Could not load database: {e}")
+    st.stop()
 
-# -------------------------------
-# 🧮 Latest Stock Metrics
-# -------------------------------
-st.subheader("🧮 Latest Stock Metrics")
-latest_df = df[df['datetime'] == latest_date].groupby('company').last().reset_index()
+# Normalize column names
+stock_df.columns = stock_df.columns.str.lower()
+signals_df.columns = signals_df.columns.str.lower()
 
-for idx, row in latest_df.iterrows():
-    col1, col2, col3 = st.columns(3)
-    with col1:
-        st.metric(label=f"{row['company']} Price", value=f"₦{row['close']:.2f}")
-    with col2:
-        st.metric(label="Volume", value=f"{int(row['volume']):,}")
-    with col3:
-        st.metric(label="Signal Score", value=row['signal_score'])
+# Ensure date columns are datetime
+stock_df['date'] = pd.to_datetime(stock_df['date'], errors='coerce')
+signals_df['date'] = pd.to_datetime(signals_df['date'], errors='coerce')
+
+# Recent Stock Prices Table
+st.subheader("📅 Recent Stock Prices")
+st.dataframe(stock_df.tail(10))
+
+# Select ticker
+if 'ticker' in stock_df.columns:
+    tickers = stock_df['ticker'].unique()
+    selected_ticker = st.selectbox("Select a stock:", tickers)
+
+    filtered_price = stock_df[stock_df['ticker'] == selected_ticker]
+    st.line_chart(filtered_price.set_index('date')['close'])
+
+    st.subheader("📌 Weekly Trading Signals")
+    filtered_signals = signals_df[signals_df['ticker'] == selected_ticker]
+
+    if filtered_signals.empty:
+        st.info(f"No trading signal this week for {selected_ticker}.")
+    else:
+        latest_signals = filtered_signals.sort_values('date')
+
+        col1, col2 = st.columns(2)
+        with col1:
+            show_only_buy = st.checkbox("✅ Show only BUY signals (score = 1)")
+        with col2:
+            min_date = latest_signals['date'].min()
+            max_date = latest_signals['date'].max()
+            date_range = st.date_input("📅 Select Date Range", [min_date, max_date])
+
+        if show_only_buy:
+            latest_signals = latest_signals[latest_signals['signal_score'] == 1]
+
+        if len(date_range) == 2:
+            start_date, end_date = date_range
+            latest_signals = latest_signals[
+                (latest_signals['date'] >= pd.to_datetime(start_date)) &
+                (latest_signals['date'] <= pd.to_datetime(end_date))
+            ]
+
+        if latest_signals.empty:
+            st.info(f"No signals match your filter for {selected_ticker}.")
+        else:
+            st.dataframe(latest_signals.tail(10)[[
+                'date', 'rsi', 'macd', 'macdsignal',
+                'five_day_return', 'volume_spike', 'signal_score'
+            ]])
+
+            csv = latest_signals.to_csv(index=False)
+            st.download_button(
+                label="⬇️ Download Filtered Signals as CSV",
+                data=csv,
+                file_name=f"{selected_ticker}_signals.csv",
+                mime='text/csv'
+            )
+
+            st.write("📉 RSI Trend")
+            st.line_chart(latest_signals.set_index('date')['rsi'])
+
+            st.write("📉 MACD vs Signal Line")
+            st.line_chart(latest_signals.set_index('date')[['macd', 'macdsignal']])
+
+            st.write("🔁 Volume Spike (1 = True, 0 = False)")
+            vol_df = latest_signals[['date', 'volume_spike']].copy()
+            vol_df['volume_spike'] = vol_df['volume_spike'].astype(int)
+            vol_df = vol_df.set_index('date')
+            st.bar_chart(vol_df)
+
+else:
+    st.warning("⚠️ No 'ticker' column found in stock data.")
 
 st.markdown("---")
 
-# -------------------------------
-# 📈 Weekly Gainers Visualization
-# -------------------------------
+# 📊 Weekly Gain Threshold Filter
 st.subheader("📈 Weekly Expected Gainers")
+latest_date = stock_df['date'].max()
 week_ago = latest_date - pd.Timedelta(weeks=1)
 
-latest = df[df['datetime'] == latest_date].groupby('company').last()
-previous = df[df['datetime'] <= week_ago].groupby('company').first()
+latest = stock_df[stock_df['date'] == latest_date].groupby('ticker').last()
+previous = stock_df[stock_df['date'] <= week_ago].groupby('ticker').first()
 
 gain_df = ((latest['close'] - previous['close']) / previous['close']) * 100
-gain_df = gain_df.reset_index()
-gain_df.columns = ['company', 'expected_gain']
+gain_df = gain_df.reset_index().rename(columns={0: 'expected_gain'})
+gain_df.columns = ['ticker', 'expected_gain']
 
-threshold = st.selectbox("Select Gain Threshold", [10, 15, 20, 25])
+threshold = st.selectbox("📊 Select Gain Threshold", [10, 15, 20, 25])
 filtered = gain_df[gain_df['expected_gain'] >= threshold]
 
 if not filtered.empty:
     st.success(f"{len(filtered)} stock(s) expected to gain ≥ {threshold}% this week.")
-    chart_type = st.radio("View as", ["Bar Chart", "Table"])
+    chart_type = st.radio("View chart as", ["Bar Chart", "Table"])
 
     if chart_type == "Bar Chart":
-        fig = px.bar(filtered, x='company', y='expected_gain', color='company')
+        fig = px.bar(filtered, x='ticker', y='expected_gain', color='ticker',
+                     color_discrete_sequence=px.colors.qualitative.Set2)
         st.plotly_chart(fig, use_container_width=True)
     else:
         st.dataframe(filtered.style.format({"expected_gain": "{:.2f}%"}))
 
-    st.subheader("📊 Trend Line of Selected Stocks")
-    selected = st.multiselect("Choose stock(s) to visualize", filtered['company'].tolist())
+    st.subheader("📈 Trend Line for Selected Stocks")
+    selected = st.multiselect("Select stocks to view trend", filtered['ticker'].tolist())
     if selected:
-        trend_data = df[df['company'].isin(selected)]
-        fig = px.line(trend_data, x='datetime', y='close', color='company', title="Trend of Selected Stocks")
+        trend_data = stock_df[stock_df['ticker'].isin(selected)]
+        fig = px.line(trend_data, x='date', y='close', color='ticker', title="Price Trend")
         st.plotly_chart(fig, use_container_width=True)
 else:
     st.warning("No stocks meet the selected gain threshold.")
 
-st.markdown("---")
+# 🚦 Signal Summary
+st.subheader("🚦 BUY Signal Summary (Signal Score = 1)")
+today_signals = signals_df[(signals_df['signal_score'] == 1) & (signals_df['date'] == signals_df['date'].max())]
 
-# -------------------------------
-# 📉 Percent Change Table
-# -------------------------------
-st.subheader("📉 % Price Change Table")
-
-period_option = st.selectbox("Select time frame", ["1 Day", "1 Week", "1 Month"])
-if period_option == "1 Day":
-    past_date = latest_date - pd.Timedelta(days=1)
-elif period_option == "1 Week":
-    past_date = latest_date - pd.Timedelta(weeks=1)
-else:
-    past_date = latest_date - pd.Timedelta(days=30)
-
-current = df[df['datetime'] == latest_date].groupby("company").last()
-past = df[df['datetime'] <= past_date].groupby("company").first()
-
-joined = current[['close']].join(past[['close']], lsuffix='_now', rsuffix='_past')
-joined.dropna(inplace=True)
-joined['% Change'] = ((joined['close_now'] - joined['close_past']) / joined['close_past']) * 100
-joined = joined[['% Change']].reset_index()
-
-st.dataframe(joined.style.format({"% Change": "{:.2f}%"}))
-
-st.markdown("---")
-
-# -------------------------------
-# 🚦 Signal Score = 1 (Buy Signal)
-# -------------------------------
-st.subheader("🚦 BUY Signals (Score = 1)")
-buy_df = df[(df['signal_score'] == 1) & (df['datetime'] == latest_date)]
-
-if not buy_df.empty:
-    st.success(f"{len(buy_df)} stock(s) triggered a BUY signal.")
-    st.dataframe(buy_df[['company', 'datetime', 'close', 'rsi', 'macd', 'five_day_return']].style.format({
-        'close': '₦{:.2f}', 'rsi': '{:.2f}', 'macd': '{:.2f}', 'five_day_return': '{:.2f}%'
+if not today_signals.empty:
+    st.success(f"{len(today_signals)} stocks triggered a BUY signal today.")
+    st.dataframe(today_signals[['ticker', 'date', 'rsi', 'macd', 'five_day_return']].style.format({
+        'rsi': '{:.2f}', 'macd': '{:.2f}', 'five_day_return': '{:.2f}%'
     }))
 else:
-    st.info("No BUY signals generated today.")
+    st.info("No BUY signals today.")
+
+conn.close()
