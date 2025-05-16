@@ -6,6 +6,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 import sqlite3
 import pandas as pd
 import time
+from datetime import datetime
 
 # Helper functions to handle '--' and other bad formats
 def parse_float(value):
@@ -83,12 +84,22 @@ while True:
             low_price = parse_float(cells[4].text.strip())
             close_price = parse_float(cells[5].text.strip())
             volume = parse_int(cells[8].text.strip())
-            trade_date = cells[10].text.strip()
+            raw_date = cells[10].text.strip()
+
+            try:
+                trade_date = datetime.strptime(raw_date, '%d-%b-%Y').strftime('%Y-%m-%d')
+            except:
+                try:
+                    trade_date = pd.to_datetime(raw_date).strftime('%Y-%m-%d')
+                except:
+                    trade_date = None
+
             ticker = company_name.split()[0]  # fallback logic
 
-            all_rows.append([
-                trade_date, ticker, company_name, open_price, high_price, low_price, close_price, volume
-            ])
+            if trade_date:
+                all_rows.append([
+                    trade_date, ticker, company_name, open_price, high_price, low_price, close_price, volume
+                ])
 
     if is_next_button_disabled():
         print("Reached last page.")
