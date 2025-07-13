@@ -10,4 +10,4 @@ webdriver-manager
 beautifulsoup4
 plotly
 setuptools
-streamlit pandas numpy
+
