@@ -1,7 +1,8 @@
 ﻿streamlit
 pandas==2.0.3
 pandas-ta==0.3.14b0
-numpy==1.26.0
+# numpy==1.26.0
+numpy>=2.0.0
 matplotlib==3.7.5
 scikit-learn==1.3.2
 statsmodels==0.14.1
