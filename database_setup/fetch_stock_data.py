@@ -6,6 +6,8 @@ from webdriver_manager.chrome import ChromeDriverManager
 import sqlite3
 import pandas as pd
 import time
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DB_PATH = os.path.join(BASE_DIR, "naijastock.db")
 from datetime import datetime
 
 # Helper functions to handle '--' and other bad formats
@@ -112,7 +114,7 @@ while True:
 
 # Step 8: Store data in SQLite database
 def store_data_in_db():
-    conn = sqlite3.connect('naijastock.db')
+    conn = sqlite3.connect(DB_PATH)
     cursor = conn.cursor()
 
     cursor.execute('''CREATE TABLE IF NOT EXISTS stock_data (
