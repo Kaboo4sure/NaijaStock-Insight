@@ -119,20 +119,23 @@ def store_data_in_db():
     cursor = conn.cursor()
 
     cursor.execute('''CREATE TABLE IF NOT EXISTS stock_data (
-                        date TEXT,
-                        ticker TEXT,
-                        company_name TEXT,
-                        open REAL,
-                        high REAL,
-                        low REAL,
-                        close REAL,
-                        volume INTEGER
-                    )''')
+    date TEXT,
+    ticker TEXT,
+    company_name TEXT,
+    open REAL,
+    high REAL,
+    low REAL,
+    close REAL,
+    volume INTEGER,
+    PRIMARY KEY (date, ticker)
+)''')
+
 
     for row in all_rows:
-        cursor.execute('''INSERT INTO stock_data 
-                          (date, ticker, company_name, open, high, low, close, volume)
-                          VALUES (?, ?, ?, ?, ?, ?, ?, ?)''', row)
+        cursor.execute('''INSERT OR IGNORE INTO stock_data 
+            (date, ticker, company_name, open, high, low, close, volume)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?)''', row)
+
 
     conn.commit()
     conn.close()
