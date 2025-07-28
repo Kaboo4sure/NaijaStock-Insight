@@ -39,20 +39,21 @@ def generate_signals(df):
             'signal_score'
         ] = 1
 
-        # Resample to get weekly (Friday) data with all required fields
+        # Get last row of each Friday group
         weekly = group.set_index('date').resample('W-FRI').last().dropna(subset=['close']).copy()
         weekly['ticker'] = ticker
         weekly['company_name'] = group['company_name'].iloc[-1]
         weekly = weekly.reset_index()
 
+        # Pick the columns you want to store
         selected = weekly[['company_name', 'ticker', 'date', 'rsi', 'macd', 'five_day_return', 'signal_score']]
         all_signals.append(selected)
 
     result = pd.concat(all_signals).sort_values(by=['ticker', 'date']).reset_index(drop=True)
-    print(result.tail(10))
+    print(result.tail(10))  # Show preview
     return result
 
-# Main block
+# --- Run the script ---
 if __name__ == "__main__":
     db_path = "naijastock.db"
     conn = sqlite3.connect(db_path)
