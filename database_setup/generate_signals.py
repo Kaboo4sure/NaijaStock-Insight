@@ -1,52 +1,44 @@
 import pandas as pd
-import pandas_ta as ta
 import sqlite3
 
 def generate_signals(df):
     df.columns = df.columns.str.lower()
-    required_cols = ['date', 'close', 'volume']
+    required_cols = ['date', 'close', 'ticker']
     for col in required_cols:
         if col not in df.columns:
             raise ValueError(f"Missing required column: {col}")
 
     df['date'] = pd.to_datetime(df['date'], errors='coerce')
     df = df.dropna(subset=['date'])
-    df = df.sort_values(by=['ticker', 'date']) if 'ticker' in df.columns else df.sort_values(by='date')
 
-    df['five_day_return'] = df['close'].pct_change(5) * 100
-    df['RSI'] = ta.rsi(df['close'], length=14)
+    all_signals = []
 
-    macd = ta.macd(df['close'], fast=12, slow=26, signal=9)
-    if macd is not None:
-        df['macd'] = macd['MACD_12_26_9']
-        df['macdsignal'] = macd['MACDs_12_26_9']
-        df['macdhist'] = macd['MACDh_12_26_9']
+    for ticker, group in df.groupby('ticker'):
+        group = group.sort_values('date').copy()
+
+        if len(group) < 2:
+            print(f"Skipping {ticker} (only {len(group)} row)")
+            continue
+
+        # ✅ Simple signal: 1 if price went up from previous day
+        group['price_change'] = group['close'].pct_change()
+        group['signal_score'] = (group['price_change'] > 0).astype(int)
+
+        # Resample weekly, get last available row each week
+        weekly = group.set_index('date').resample('W-FRI').last().dropna(subset=['close']).copy()
+        weekly['ticker'] = ticker
+        all_signals.append(weekly[['ticker', 'signal_score']].reset_index())
+
+    if all_signals:
+        final_df = pd.concat(all_signals).sort_values(by=['ticker', 'date']).reset_index(drop=True)
+        final_df.to_csv("fallback_signals_output.csv", index=False)
+        print(final_df.tail(10))
+        return final_df
     else:
-        df['macd'] = df['macdsignal'] = df['macdhist'] = float('nan')
+        print("⚠️ No valid data found for any ticker.")
+        return pd.DataFrame(columns=['date', 'ticker', 'signal_score'])
 
-    df['twenty_day_avg_volume'] = df['volume'].rolling(window=20).mean()
-    df['volume_spike'] = df['volume'] > df['twenty_day_avg_volume']
-
-    df['signal_score'] = 0
-    df.loc[
-        (df['five_day_return'] > 0) &
-        (df['RSI'] < 70) &
-        (df['macd'] > df['macdsignal']) &
-        (df['volume_spike'] == True),
-        'signal_score'
-    ] = 1
-
-    df.reset_index(drop=True, inplace=True)
-
-    if 'ticker' in df.columns:
-        print(df[['date', 'ticker', 'signal_score']].tail())
-    else:
-        print(df[['date', 'signal_score']].tail())
-
-    return df
-
-
-# 🔁 NEW: Load from stock_data, generate signals, save to weekly_signals
+# Main block
 if __name__ == "__main__":
     db_path = "naijastock.db"
     conn = sqlite3.connect(db_path)
