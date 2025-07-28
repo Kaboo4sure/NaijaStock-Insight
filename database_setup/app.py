@@ -56,9 +56,9 @@ selected_period = st.sidebar.selectbox("Period for % Change", ["1 Day", "1 Week"
 # --- KPIs ---
 latest_date = stock_df['date'].max()
 col1, col2 = st.columns(2)
-col1.metric("📅 Latest Date", latest_date.strftime('%Y-%m-%d'))
+col1.metric("🗕️ Latest Date", latest_date.strftime('%Y-%m-%d'))
 
-if not signal_df.empty:
+if not signal_df.empty and 'date' in signal_df.columns:
     latest_signals = signal_df[signal_df['date'] == latest_date]
     col2.metric("🚦 BUY Signals Today", int((latest_signals['signal_score'] == 1).sum()))
 
@@ -121,5 +121,8 @@ if not signal_df.empty:
         avg_rsi = avg_rsi[avg_rsi['company_name'].isin(selected_companies)]
     fig = px.bar(avg_rsi.sort_values(by='rsi'), x='company_name', y='rsi', title="Avg RSI by Company")
     st.plotly_chart(fig, use_container_width=True)
+
+# --- Footer ---
+st.caption(f"Last updated: {latest_date.strftime('%Y-%m-%d')}")
 
 conn.close()

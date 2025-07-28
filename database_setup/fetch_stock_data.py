@@ -135,6 +135,7 @@ def store_data_in_db():
         cursor.execute('''INSERT OR IGNORE INTO stock_data 
             (date, ticker, company_name, open, high, low, close, volume)
             VALUES (?, ?, ?, ?, ?, ?, ?, ?)''', row)
+        
 
 
     conn.commit()
