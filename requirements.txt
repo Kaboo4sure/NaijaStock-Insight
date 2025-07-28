@@ -1,7 +1,7 @@
 ﻿streamlit==1.47.1
 pandas==2.2.2              # NumPy‑2‑compatible pandas
 pandas-ta==0.3.14b0
-numpy==2.3.2               # only binary wheels on PyPI for 3.13
+numpy==1.25.6               # only binary wheels on PyPI for 3.13
 matplotlib==3.8.4
 scikit-learn==1.5.2        # wheels for Python 3.13 start in 1.5.x
 statsmodels==0.14.4        # drops the <2.0 NumPy bound
