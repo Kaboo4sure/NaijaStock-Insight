@@ -13,35 +13,46 @@ def generate_signals(df):
     df = df.dropna(subset=['date'])
     df = df.sort_values(by=['ticker', 'date'])
 
-    df['five_day_return'] = df.groupby('ticker')['close'].pct_change(5) * 100
-    df['RSI'] = df.groupby('ticker')['close'].transform(lambda x: ta.rsi(x, length=14))
+    all_signals = []
 
-    macd = df.groupby('ticker')['close'].apply(lambda x: ta.macd(x, fast=12, slow=26, signal=9))
-    if isinstance(macd, pd.DataFrame):
-        df['macd'] = macd['MACD_12_26_9'].reset_index(level=0, drop=True)
-        df['macdsignal'] = macd['MACDs_12_26_9'].reset_index(level=0, drop=True)
-        df['macdhist'] = macd['MACDh_12_26_9'].reset_index(level=0, drop=True)
-    else:
-        df['macd'] = df['macdsignal'] = df['macdhist'] = float('nan')
+    for ticker, group in df.groupby('ticker'):
+        group = group.copy()
+        group['five_day_return'] = group['close'].pct_change(5) * 100
+        group['rsi'] = ta.rsi(group['close'], length=14)
 
-    df['twenty_day_avg_volume'] = df.groupby('ticker')['volume'].transform(lambda x: x.rolling(window=20).mean())
-    df['volume_spike'] = df['volume'] > df['twenty_day_avg_volume']
+        macd = ta.macd(group['close'], fast=12, slow=26, signal=9)
+        if macd is not None:
+            group['macd'] = macd['MACD_12_26_9']
+            group['macdsignal'] = macd['MACDs_12_26_9']
+        else:
+            group['macd'] = group['macdsignal'] = float('nan')
 
-    df['signal_score'] = 0
-    df.loc[
-        (df['five_day_return'] > 0) &
-        (df['RSI'] < 70) &
-        (df['macd'] > df['macdsignal']) &
-        (df['volume_spike'] == True),
-        'signal_score'
-    ] = 1
+        group['twenty_day_avg_volume'] = group['volume'].rolling(20).mean()
+        group['volume_spike'] = group['volume'] > group['twenty_day_avg_volume']
 
-    df.reset_index(drop=True, inplace=True)
-    print(df[['date', 'ticker', 'signal_score']].tail())
+        group['signal_score'] = 0
+        group.loc[
+            (group['five_day_return'] > 0) &
+            (group['rsi'] < 70) &
+            (group['macd'] > group['macdsignal']) &
+            (group['volume_spike']),
+            'signal_score'
+        ] = 1
 
-    return df
+        # Resample to get weekly (Friday) data with all required fields
+        weekly = group.set_index('date').resample('W-FRI').last().dropna(subset=['close']).copy()
+        weekly['ticker'] = ticker
+        weekly['company_name'] = group['company_name'].iloc[-1]
+        weekly = weekly.reset_index()
 
-# Main block to run
+        selected = weekly[['company_name', 'ticker', 'date', 'rsi', 'macd', 'five_day_return', 'signal_score']]
+        all_signals.append(selected)
+
+    result = pd.concat(all_signals).sort_values(by=['ticker', 'date']).reset_index(drop=True)
+    print(result.tail(10))
+    return result
+
+# Main block
 if __name__ == "__main__":
     db_path = "naijastock.db"
     conn = sqlite3.connect(db_path)
@@ -49,11 +60,7 @@ if __name__ == "__main__":
     try:
         stock_df = pd.read_sql("SELECT * FROM stock_data", conn)
         signal_df = generate_signals(stock_df)
-
-        # Save only the useful columns for your Streamlit app
-        signal_df[['company_name', 'ticker', 'date', 'rsi', 'macd', 'five_day_return', 'signal_score']] \
-            .to_sql("weekly_signals", conn, if_exists="replace", index=False)
-
+        signal_df.to_sql("weekly_signals", conn, if_exists="replace", index=False)
         print(f"✅ weekly_signals table created with {len(signal_df)} rows.")
     except Exception as e:
         print(f"❌ Error: {e}")
