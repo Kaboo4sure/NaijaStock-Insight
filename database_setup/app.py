@@ -95,4 +95,4 @@ def update_signal_table(companies_selected, filter_buy):
 
 # --- Run Server ---
 if __name__ == "__main__":
-    app.run_server(debug=True)
+    app.run(debug=True)
