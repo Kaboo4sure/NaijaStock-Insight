@@ -1,146 +1,98 @@
-import streamlit as st
+import dash
+from dash import dcc, html, Input, Output
 import pandas as pd
+import plotly.graph_objects as go
+import plotly.express as px
 import sqlite3
 import os
-import plotly.express as px
-import plotly.graph_objects as go
 
-# --- App Config ---
-st.set_page_config(page_title="NaijaStock Insight", layout="wide")
-
-# --- Dark Mode Toggle ---
-theme = st.sidebar.radio("Theme Mode", ["Light", "Dark"])
-if theme == "Dark":
-    st.markdown("""
-        <style>
-        body, .stApp { background-color: #0e1117; color: white; }
-        .css-1d391kg { color: white; }
-        </style>
-    """, unsafe_allow_html=True)
-
-st.title("📊 NaijaStock Insight Dashboard")
-
-# --- Load Database ---
+# --- Load Data ---
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DB_PATH = os.path.join(BASE_DIR, "naijastock.db")
+conn = sqlite3.connect(DB_PATH)
 
-stock_df = pd.DataFrame()
-signal_df = pd.DataFrame()
+try:
+    stock_df = pd.read_sql("SELECT * FROM stock_data", conn)
+    signal_df = pd.read_sql("SELECT * FROM weekly_signals", conn)
+except Exception:
+    stock_df = pd.DataFrame()
+    signal_df = pd.DataFrame()
 
-if os.path.exists(DB_PATH):
-    try:
-        conn = sqlite3.connect(DB_PATH)
-        stock_df = pd.read_sql("SELECT * FROM stock_data", conn)
-        try:
-            signal_df = pd.read_sql("SELECT * FROM weekly_signals", conn)
-        except Exception:
-            st.info("✅ Stock data loaded, but weekly_signals table not found.")
-    except Exception as e:
-        st.error(f"Failed to read from database: {e}")
-else:
-    st.warning("⚠️ Database file not found. Please upload `naijastock.db`.")
-    st.stop()
+conn.close()
 
-# --- Clean Data ---
-stock_df.columns = stock_df.columns.str.lower()
 stock_df['date'] = pd.to_datetime(stock_df['date'], errors='coerce')
-
+signal_df['date'] = pd.to_datetime(signal_df['date'], errors='coerce')
 if 'company_name' not in stock_df.columns:
     stock_df['company_name'] = stock_df['ticker']
 
-if not signal_df.empty:
-    signal_df.columns = signal_df.columns.str.lower()
-    signal_df['date'] = pd.to_datetime(signal_df['date'], errors='coerce')
-    if 'company_name' not in signal_df.columns and 'ticker' in signal_df.columns:
-        signal_df = pd.merge(signal_df, stock_df[['ticker', 'company_name']].drop_duplicates(), on='ticker', how='left')
+# --- App Init ---
+app = dash.Dash(__name__)
+app.title = "NaijaStock Insight"
 
-# --- Sidebar Filters ---
-st.sidebar.header("📂 Filters")
-all_companies = sorted(stock_df['company_name'].dropna().unique())
-selected_companies = st.sidebar.multiselect("Select Companies", all_companies, default=all_companies[:5])
-chart_type = st.sidebar.radio("Chart Type", ["Line Chart", "Candlestick"])
-show_only_buy = st.sidebar.checkbox("✅ Show Only BUY Signals", value=True)
-selected_period = st.sidebar.selectbox("Period for % Change", ["1 Day", "1 Week", "1 Month"])
+companies = sorted(stock_df['company_name'].dropna().unique())
 
-# --- KPIs ---
-latest_date = stock_df['date'].max()
-col1, col2 = st.columns(2)
-col1.metric("🗕️ Latest Date", latest_date.strftime('%Y-%m-%d') if pd.notna(latest_date) else "N/A")
+# --- App Layout ---
+app.layout = html.Div([
+    html.H1("📊 NaijaStock Insight Dashboard"),
+    
+    html.Label("Select Companies:"),
+    dcc.Dropdown(companies, companies[:5], multi=True, id='company-dropdown'),
+    
+    html.Label("Chart Type:"),
+    dcc.RadioItems(['Line Chart', 'Candlestick'], 'Line Chart', id='chart-type'),
 
-if not signal_df.empty and 'date' in signal_df.columns:
-    latest_signals = signal_df[signal_df['date'] == latest_date]
-    col2.metric("🚦 BUY Signals Today", int((latest_signals['signal_score'] == 1).sum()))
-else:
-    col2.metric("🚦 BUY Signals Today", "N/A")
+    html.Br(),
+    dcc.Graph(id='price-chart'),
 
-# --- Trend Chart ---
-st.subheader("📈 Price Trend")
-if selected_companies:
-    filtered = stock_df[stock_df['company_name'].isin(selected_companies)]
-    if chart_type == "Line Chart":
-        fig = px.line(filtered, x='date', y='close', color='company_name')
-        st.plotly_chart(fig, use_container_width=True)
+    html.H3("🚦 BUY Signals Table"),
+    dcc.Checklist(['Show Only BUY Signals'], ['Show Only BUY Signals'], id='buy-filter'),
+    html.Div(id='signal-table')
+])
+
+# --- Callbacks ---
+@app.callback(
+    Output('price-chart', 'figure'),
+    Input('company-dropdown', 'value'),
+    Input('chart-type', 'value')
+)
+def update_chart(companies_selected, chart_type):
+    filtered = stock_df[stock_df['company_name'].isin(companies_selected)]
+    if chart_type == 'Line Chart':
+        fig = px.line(filtered, x='date', y='close', color='company_name', title="Price Trend")
     else:
-        for company in selected_companies:
+        fig = go.Figure()
+        for company in companies_selected:
             sub = filtered[filtered['company_name'] == company]
-            fig = go.Figure(data=[go.Candlestick(x=sub['date'],
-                        open=sub['open'], high=sub['high'],
-                        low=sub['low'], close=sub['close'])])
-            fig.update_layout(title=f"Candlestick - {company}", xaxis_title='Date', yaxis_title='Price')
-            st.plotly_chart(fig, use_container_width=True)
-else:
-    st.info("Please select at least one company.")
+            fig.add_trace(go.Candlestick(
+                x=sub['date'], open=sub['open'], high=sub['high'],
+                low=sub['low'], close=sub['close'], name=company
+            ))
+        fig.update_layout(title="Candlestick Chart")
+    return fig
 
-# --- Percent Change Table ---
-st.subheader("📉 % Price Change")
-if not stock_df.empty:
-    days_back = 1 if selected_period == "1 Day" else 7 if selected_period == "1 Week" else 30
-    past_date = latest_date - pd.Timedelta(days=days_back)
-    current = stock_df[stock_df['date'] == latest_date].groupby("company_name").last()
-    past = stock_df[stock_df['date'] <= past_date].groupby("company_name").first()
-    joined = current[['close']].join(past[['close']], lsuffix='_now', rsuffix='_past')
-    joined.dropna(inplace=True)
-    joined['% Change'] = ((joined['close_now'] - joined['close_past']) / joined['close_past']) * 100
-    joined = joined[['% Change']].reset_index()
-    if selected_companies:
-        joined = joined[joined['company_name'].isin(selected_companies)]
-    st.dataframe(joined.style.format({"% Change": "{:.2f}%"}))
-else:
-    st.info("Stock data is empty. Cannot calculate percent changes.")
+@app.callback(
+    Output('signal-table', 'children'),
+    Input('company-dropdown', 'value'),
+    Input('buy-filter', 'value')
+)
+def update_signal_table(companies_selected, filter_buy):
+    latest = signal_df['date'].max()
+    filtered = signal_df[signal_df['date'] == latest]
+    if 'Show Only BUY Signals' in filter_buy:
+        filtered = filtered[filtered['signal_score'] == 1]
+    filtered = filtered[filtered['company_name'].isin(companies_selected)]
+    return html.Table([
+        html.Tr([html.Th(col) for col in ['Company', 'RSI', 'MACD', '5-Day Return', 'Signal']])
+    ] + [
+        html.Tr([
+            html.Td(row['company_name']),
+            html.Td(f"{row['rsi']:.2f}"),
+            html.Td(f"{row['macd']:.2f}"),
+            html.Td(f"{row['five_day_return']:.2f}%"),
+            html.Td(int(row['signal_score']))
+        ]) for _, row in filtered.iterrows()
+    ])
 
-# --- BUY Signals Table ---
-if not signal_df.empty:
-    st.subheader("🚦 Signal Table")
-    recent_signals = signal_df[signal_df['date'] == latest_date]
-    if selected_companies:
-        recent_signals = recent_signals[recent_signals['company_name'].isin(selected_companies)]
-    if show_only_buy:
-        recent_signals = recent_signals[recent_signals['signal_score'] == 1]
-
-    if not recent_signals.empty:
-        st.dataframe(recent_signals[['company_name', 'date', 'rsi', 'macd', 'five_day_return', 'signal_score']]
-                     .style.format({
-                         'rsi': '{:.2f}', 'macd': '{:.2f}', 'five_day_return': '{:.2f}%', 'signal_score': '{:.0f}'
-                     }))
-        csv = recent_signals.to_csv(index=False)
-        st.download_button("⬇️ Download Signal Data", csv, "signals.csv", "text/csv")
-    else:
-        st.info("No signals to display.")
-else:
-    st.info("Signal data is not available.")
-
-# --- Aggregated Insight (Optional) ---
-if not signal_df.empty:
-    st.subheader("📊 Average RSI by Company")
-    avg_rsi = signal_df.groupby("company_name")['rsi'].mean().reset_index().dropna()
-    if selected_companies:
-        avg_rsi = avg_rsi[avg_rsi['company_name'].isin(selected_companies)]
-    fig = px.bar(avg_rsi.sort_values(by='rsi'), x='company_name', y='rsi', title="Avg RSI by Company")
-    st.plotly_chart(fig, use_container_width=True)
-
-# --- Footer ---
-st.caption(f"Last updated: {latest_date.strftime('%Y-%m-%d') if pd.notna(latest_date) else 'Unknown'}")
-
-# --- Close connection ---
-if 'conn' in locals():
-    conn.close()
+# --- Run Server ---
+if __name__ == "__main__":
+    app.run_server(debug=True)
