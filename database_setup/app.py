@@ -117,11 +117,23 @@ if not signal_df.empty:
     if show_only_buy:
         recent_signals = recent_signals[recent_signals['signal_score'] == 1]
 
+    expected_cols = ['company_name', 'date', 'rsi', 'macd', 'five_day_return', 'signal_score']
+    available_cols = recent_signals.columns.tolist()
+    missing_cols = [col for col in expected_cols if col not in available_cols]
+
     if not recent_signals.empty:
-        st.dataframe(recent_signals[['company_name', 'date', 'rsi', 'macd', 'five_day_return', 'signal_score']]
-                     .style.format({
-                         'rsi': '{:.2f}', 'macd': '{:.2f}', 'five_day_return': '{:.2f}%', 'signal_score': '{:.0f}'
-                     }))
+        if missing_cols:
+            st.warning(f"⚠️ Missing columns in signal data: {missing_cols}")
+            st.dataframe(recent_signals)
+        else:
+            st.dataframe(
+                recent_signals[expected_cols].style.format({
+                    'rsi': '{:.2f}',
+                    'macd': '{:.2f}',
+                    'five_day_return': '{:.2f}%',
+                    'signal_score': '{:.0f}'
+                })
+            )
         csv = recent_signals.to_csv(index=False)
         st.download_button("⬇️ Download Signal Data", csv, "signals.csv", "text/csv")
     else:
