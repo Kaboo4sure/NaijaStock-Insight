@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NaijaStock Insight</title>
+
+    <meta
+        name="description"
+        content="Nigerian stock market prices, trends and weekly technical signals."
+    >
+
+    <link rel="stylesheet" href="styles.css">
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min@2.35.2/plotly.min.js"></script>
+        defer>
+    </script>
+
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div>
+            <h1>NaijaStock Insight</h1>
+            <p>Nigerian equity prices, market trends and weekly signals</p>
+        </div>
+
+        <div class="update-status">
+            <span class="status-dot"></span>
+            <span id="lastUpdated">Loading market data...</span>
+        </div>
+    </header>
+
+    <main class="dashboard">
+        <section class="metric-grid">
+            <article class="metric-card">
+                <span>Latest Market Date</span>
+                <strong id="latestDate">—</strong>
+            </article>
+
+            <article class="metric-card">
+                <span>Companies Tracked</span>
+                <strong id="companyCount">—</strong>
+            </article>
+
+            <article class="metric-card">
+                <span>Price Records</span>
+                <strong id="recordCount">—</strong>
+            </article>
+
+            <article class="metric-card">
+                <span>Latest BUY Signals</span>
+                <strong id="buySignalCount">—</strong>
+            </article>
+        </section>
+
+        <section class="panel controls-panel">
+            <div class="control">
+                <label for="companySelect">Company</label>
+                <select id="companySelect">
+                    <option value="">Loading companies...</option>
+                </select>
+            </div>
+
+            <div class="control">
+                <label for="chartType">Chart Type</label>
+                <select id="chartType">
+                    <option value="line">Closing-price line</option>
+                    <option value="candlestick">Candlestick</option>
+                </select>
+            </div>
+
+            <div class="control">
+                <label for="changePeriod">Price-change period</label>
+                <select id="changePeriod">
+                    <option value="1">1 day</option>
+                    <option value="7" selected>1 week</option>
+                    <option value="30">1 month</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="panel">
+            <div class="section-heading">
+                <div>
+                    <h2 id="chartTitle">Price History</h2>
+                    <p>Historical NGX market prices</p>
+                </div>
+            </div>
+
+            <div id="priceChart" class="chart"></div>
+        </section>
+
+        <section class="panel">
+            <div class="section-heading">
+                <div>
+                    <h2>Latest Market Prices</h2>
+                    <p id="priceTableDescription">
+                        Prices from the latest available trading date
+                    </p>
+                </div>
+
+                <input
+                    id="stockSearch"
+                    class="search-input"
+                    type="search"
+                    placeholder="Search company or ticker"
+                >
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Company</th>
+                            <th>Ticker</th>
+                            <th>Open</th>
+                            <th>High</th>
+                            <th>Low</th>
+                            <th>Close</th>
+                            <th>Volume</th>
+                            <th id="changeHeader">7-Day Change</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="stockTableBody"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="panel">
+            <div class="section-heading">
+                <div>
+                    <h2>Latest Weekly Signals</h2>
+                    <p>Technical signals generated from RSI, MACD and volume</p>
+                </div>
+
+                <button id="downloadSignals" class="download-button">
+                    Download signals
+                </button>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Company</th>
+                            <th>Ticker</th>
+                            <th>Date</th>
+                            <th>RSI</th>
+                            <th>MACD</th>
+                            <th>5-Day Return</th>
+                            <th>Signal</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="signalTableBody"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="errorPanel" class="error-panel hidden">
+            <h2>Unable to load dashboard data</h2>
+            <p id="errorMessage"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            NaijaStock Insight provides market information for research and
+            educational purposes. It is not financial advice.
+        </p>
+    </footer>
+</body>
+</html>

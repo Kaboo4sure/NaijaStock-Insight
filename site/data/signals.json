@@ -1,0 +1,1482 @@
+[
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"ABBEYBDS",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"ABCTRANS",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"ACADEMY",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"ACCESSCORP",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"AFRINSURE",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"AFRIPRUD",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"AFROMEDIA",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"AIICO",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"AIRTELAFRI",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"ALEX",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"ARADEL",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"ASOSAVINGS",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"AUSTINLAZ",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"AVAIF",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"BAPLC",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"BERGER",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"BETAGLAS",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"BUACEMENT",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"BUAFOODS",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"CADBURY",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"CAP",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"CAVERTON",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"CHAMPION",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"CHAMS",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"CHELLARAM",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"CILEASING",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"CONHALLPLC",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"CONOIL",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"CORNERST",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"CUSTODIAN",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"CUTIX",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"CWG",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"DAARCOMM",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"DANGCEM",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"DANGSUGAR",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"DEAPCAP",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"DUNLOP",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"EKOCORP",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"ELLAHLAKES",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"ENAMELWA",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"ETERNA",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"ETI",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"ETRANZACT",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"EUNISELL",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"FCMB",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"FIDELITYBK",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"FIDSON",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"FIRSTHOLDCO",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"FTNCOCOA",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"GEREGU",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"GOLDBREW",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"GTCO",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"GUINEAINS",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"GUINNESS",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"HMCALL",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"HONYFLOUR",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"IKEJAHOTEL",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"IMG",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"INFINITY",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"INTBREW",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"INTENEGINS",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"JAIZBANK",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"JAPAULGOLD",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"JBERGER",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"JOHNHOLT",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"JULI",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"LASACO",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"LEARNAFRCA",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"LEGENDINT",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"LINKASSURE",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"LIVESTOCK",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"LIVINGTRUST",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"MANSARD",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"MAYBAKER",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"MBENEFIT",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"MCNICHOLS",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"MECURE",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"MEYER",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"MORISON",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"MRS",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"MTNN",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"MULTITREX",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"MULTIVERSE",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"NAHCO",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"NASCON",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"NB",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"NCR",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"NEIMETH",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"NEM",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"NESTLE",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"NGXGROUP",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"NIDF",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"NNFM",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"NOTORE",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"NPFMCRFBK",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"NSLTECH",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"OANDO",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"OKOMUOIL",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"OMATEK",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"PHARMDEKO",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"PREMPAINTS",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"PRESCO",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"PRESTIGE",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"PZ",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"REDSTAREX",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"REGALINS",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"RONCHESS",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"ROYALEX",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"RTBRISCOE",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"SCOA",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"SEPLAT",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"SFSREIT",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"SKYAVN",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"SMURFIT",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"SOVRENINS",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"STACO",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"STANBIC",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"STDINSURE",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"STERLINGNG",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"SUNUASSUR",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"TANTALIZER",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"THOMASWY",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"TIP",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"TOTAL",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"TRANSCOHOT",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"TRANSCORP",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"TRANSEXPR",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"TRANSPOWER",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"TRIPPLEG",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"UACN",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"UBA",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"UCAP",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"UHOMREIT",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"UNILEVER",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"UNIONDICON",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"UNITYBNK",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"UNIVINSURE",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"UPDC",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"UPDCREIT",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"UPL",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"VANLEER",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"VERITASKAP",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"VFDGROUP",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"VITAFOAM",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"WAPCO",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"WAPIC",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"WEMABANK",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-09 00:00:00",
+    "ticker":"ZENITHBANK",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"ABBEYBDS",
+    "signal_score":1
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"ABCTRANS",
+    "signal_score":1
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"ACADEMY",
+    "signal_score":1
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"ACCESSCORP",
+    "signal_score":1
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"AFRINSURE",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"AFRIPRUD",
+    "signal_score":1
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"AFROMEDIA",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"AIICO",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"AIRTELAFRI",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"ALEX",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"ARADEL",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"ASOSAVINGS",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"AUSTINLAZ",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"AVAIF",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"BAPLC",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"BERGER",
+    "signal_score":1
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"BETAGLAS",
+    "signal_score":1
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"BUACEMENT",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"BUAFOODS",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"CADBURY",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"CAP",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"CAVERTON",
+    "signal_score":1
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"CHAMPION",
+    "signal_score":1
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"CHAMS",
+    "signal_score":1
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"CHELLARAM",
+    "signal_score":1
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"CILEASING",
+    "signal_score":1
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"CONHALLPLC",
+    "signal_score":1
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"CONOIL",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"CORNERST",
+    "signal_score":1
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"CUSTODIAN",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"CUTIX",
+    "signal_score":1
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"CWG",
+    "signal_score":1
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"DAARCOMM",
+    "signal_score":1
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"DANGCEM",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"DANGSUGAR",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"DEAPCAP",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"DUNLOP",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"EKOCORP",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"ELLAHLAKES",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"ENAMELWA",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"ETERNA",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"ETI",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"ETRANZACT",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"EUNISELL",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"FCMB",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"FIDELITYBK",
+    "signal_score":1
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"FIDSON",
+    "signal_score":1
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"FIRSTHOLDCO",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"FTNCOCOA",
+    "signal_score":1
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"GEREGU",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"GOLDBREW",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"GTCO",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"GUINEAINS",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"GUINNESS",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"HMCALL",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"HONYFLOUR",
+    "signal_score":1
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"IKEJAHOTEL",
+    "signal_score":1
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"IMG",
+    "signal_score":1
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"INFINITY",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"INTBREW",
+    "signal_score":1
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"INTENEGINS",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"JAIZBANK",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"JAPAULGOLD",
+    "signal_score":1
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"JBERGER",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"JOHNHOLT",
+    "signal_score":1
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"JULI",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"LASACO",
+    "signal_score":1
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"LEARNAFRCA",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"LEGENDINT",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"LINKASSURE",
+    "signal_score":1
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"LIVESTOCK",
+    "signal_score":1
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"LIVINGTRUST",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"MANSARD",
+    "signal_score":1
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"MAYBAKER",
+    "signal_score":1
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"MBENEFIT",
+    "signal_score":1
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"MCNICHOLS",
+    "signal_score":1
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"MECURE",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"MEYER",
+    "signal_score":1
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"MORISON",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"MRS",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"MTNN",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"MULTITREX",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"MULTIVERSE",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"NAHCO",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"NASCON",
+    "signal_score":1
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"NB",
+    "signal_score":1
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"NCR",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"NEIMETH",
+    "signal_score":1
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"NEM",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"NESTLE",
+    "signal_score":1
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"NGXGROUP",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"NIDF",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"NNFM",
+    "signal_score":1
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"NOTORE",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"NPFMCRFBK",
+    "signal_score":1
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"NSLTECH",
+    "signal_score":1
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"OANDO",
+    "signal_score":1
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"OKOMUOIL",
+    "signal_score":1
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"OMATEK",
+    "signal_score":1
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"PHARMDEKO",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"PREMPAINTS",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"PRESCO",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"PRESTIGE",
+    "signal_score":1
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"PZ",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"REDSTAREX",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"REGALINS",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"RONCHESS",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"ROYALEX",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"RTBRISCOE",
+    "signal_score":1
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"SCOA",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"SEPLAT",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"SFSREIT",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"SKYAVN",
+    "signal_score":1
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"SMURFIT",
+    "signal_score":1
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"SOVRENINS",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"STACO",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"STANBIC",
+    "signal_score":1
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"STDINSURE",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"STERLINGNG",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"SUNUASSUR",
+    "signal_score":1
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"TANTALIZER",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"THOMASWY",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"TIP",
+    "signal_score":1
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"TOTAL",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"TRANSCOHOT",
+    "signal_score":1
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"TRANSCORP",
+    "signal_score":1
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"TRANSEXPR",
+    "signal_score":1
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"TRANSPOWER",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"TRIPPLEG",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"UACN",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"UBA",
+    "signal_score":1
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"UCAP",
+    "signal_score":1
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"UHOMREIT",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"UNILEVER",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"UNIONDICON",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"UNITYBNK",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"UNIVINSURE",
+    "signal_score":1
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"UPDC",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"UPDCREIT",
+    "signal_score":1
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"UPL",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"VANLEER",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"VERITASKAP",
+    "signal_score":1
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"VFDGROUP",
+    "signal_score":1
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"VITAFOAM",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"WAPCO",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"WAPIC",
+    "signal_score":0
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"WEMABANK",
+    "signal_score":1
+  },
+  {
+    "date":"2025-05-16 00:00:00",
+    "ticker":"ZENITHBANK",
+    "signal_score":0
+  }
+]
