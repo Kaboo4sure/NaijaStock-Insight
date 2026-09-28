@@ -88,6 +88,14 @@ naijastock_venv/
 ## Viewing the data**
 - run <python view_data.py>
 
+## Historical NGX prototype data
+- Run <python database_setup/import_historical_data.py> from the repository root.
+- The importer downloads a pinned copy of the public 2000-2025 dataset,
+  validates it, and creates <database_setup/historical_stock.db>.
+- The historical database is intentionally ignored by Git. The dashboard
+  exports only the latest 260 observations per ticker for responsive charts.
+- The source repository does not currently state a licence. Confirm permission
+  and provenance before commercial use or redistribution.
+
 # ** Automation**
 - < streamlit run app.py> to run the dashboard
-
