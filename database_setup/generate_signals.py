@@ -6,6 +6,48 @@ import pandas as pd
 
 BASE_DIR = Path(__file__).resolve().parent
 DB_PATH = BASE_DIR / "naijastock.db"
+HISTORICAL_DB_PATH = BASE_DIR / "historical_stock.db"
+
+
+def table_exists(connection, table_name):
+    return connection.execute(
+        "SELECT 1 FROM sqlite_master WHERE type = 'table' AND name = ?",
+        (table_name,),
+    ).fetchone() is not None
+
+
+def load_stock_history():
+    frames = []
+
+    if HISTORICAL_DB_PATH.exists():
+        with sqlite3.connect(HISTORICAL_DB_PATH) as connection:
+            if table_exists(connection, "historical_stock_data"):
+                historical = pd.read_sql_query(
+                    """
+                    SELECT date, ticker, company_name, open, high, low,
+                           close, volume
+                    FROM historical_stock_data
+                    """,
+                    connection,
+                )
+                historical["source_priority"] = 0
+                frames.append(historical)
+
+    with sqlite3.connect(DB_PATH) as connection:
+        current = pd.read_sql_query("SELECT * FROM stock_data", connection)
+        current["source_priority"] = 1
+        frames.append(current)
+
+    stock_data = pd.concat(frames, ignore_index=True)
+    stock_data["date"] = pd.to_datetime(stock_data["date"], errors="coerce")
+    stock_data = (
+        stock_data.dropna(subset=["date", "ticker", "close"])
+        .sort_values(["ticker", "date", "source_priority"])
+        .drop_duplicates(["ticker", "date"], keep="last")
+        .drop(columns="source_priority")
+        .reset_index(drop=True)
+    )
+    return stock_data
 
 
 def calculate_rsi(close, length=14):
@@ -158,6 +200,13 @@ def generate_signals(dataframe):
         .reset_index(drop=True)
     )
 
+    # Retain two years of website signals while calculating every indicator
+    # from the full history first.
+    latest_date = result["date"].max()
+    result = result[
+        result["date"] >= latest_date - pd.DateOffset(years=2)
+    ].reset_index(drop=True)
+
     print(result.tail(10))
     return result
 
@@ -166,12 +215,10 @@ def main():
     if not DB_PATH.exists():
         raise FileNotFoundError(f"Database not found: {DB_PATH}")
 
+    stock_data = load_stock_history()
+    signal_data = generate_signals(stock_data)
+
     with sqlite3.connect(DB_PATH) as connection:
-        stock_data = pd.read_sql_query(
-            "SELECT * FROM stock_data",
-            connection,
-        )
-        signal_data = generate_signals(stock_data)
         signal_data.to_sql(
             "weekly_signals",
             connection,
