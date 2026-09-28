@@ -90,17 +90,19 @@ def export_data():
         date_format="iso",
     )
 
-    latest_stock_date = (
-        str(stock_data["date"].max())
-        if not stock_data.empty and "date" in stock_data.columns
-        else None
-    )
+    latest_stock_date = None
+    if not stock_data.empty and "date" in stock_data.columns:
+        latest_stock_date = pd.to_datetime(
+            stock_data["date"],
+            errors="coerce",
+        ).max().strftime("%Y-%m-%d")
 
-    latest_signal_date = (
-        str(signal_data["date"].max())
-        if not signal_data.empty and "date" in signal_data.columns
-        else None
-    )
+    latest_signal_date = None
+    if not signal_data.empty and "date" in signal_data.columns:
+        latest_signal_date = pd.to_datetime(
+            signal_data["date"],
+            errors="coerce",
+        ).max().strftime("%Y-%m-%d")
 
     metadata = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
