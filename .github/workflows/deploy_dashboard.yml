@@ -27,6 +27,14 @@ jobs:
             -t naijastock-signal-generator \
             .
 
+      - name: Import historical model data
+        run: |
+          docker run --rm \
+            -v "${{ github.workspace }}:/app" \
+            -w /app \
+            naijastock-signal-generator \
+            python database_setup/import_historical_data.py
+
       - name: Generate weekly signals
         run: |
           docker run --rm \
