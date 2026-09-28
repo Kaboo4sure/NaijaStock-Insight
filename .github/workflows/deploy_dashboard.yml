@@ -2,6 +2,12 @@ name: Deploy NaijaStock Dashboard
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - master
+    paths-ignore:
+      - 'database_setup/naijastock.db'
+      - 'site/data/**'
   schedule:
     - cron: '0 18 * * 5'  # Friday at 7 PM WAT
 
