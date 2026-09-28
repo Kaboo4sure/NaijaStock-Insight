@@ -1,4 +1,4 @@
-name: Update Weekly Signals and Website
+name: Deploy NaijaStock Dashboard
 
 on:
   workflow_dispatch:
