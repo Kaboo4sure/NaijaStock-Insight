@@ -1,1482 +1,2666 @@
 [
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"ABBEYBDS",
     "ticker":"ABBEYBDS",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"ABCTRANS",
     "ticker":"ABCTRANS",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"ACADEMY",
     "ticker":"ACADEMY",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"ACCESSCORP",
     "ticker":"ACCESSCORP",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"AFRINSURE [MRF]",
     "ticker":"AFRINSURE",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"AFRIPRUD",
     "ticker":"AFRIPRUD",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"AFROMEDIA [MRF]",
     "ticker":"AFROMEDIA",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"AIICO",
     "ticker":"AIICO",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"AIRTELAFRI",
     "ticker":"AIRTELAFRI",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"ALEX [BLS]",
     "ticker":"ALEX",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"ARADEL",
     "ticker":"ARADEL",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"ASOSAVINGS [DWL]",
     "ticker":"ASOSAVINGS",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"AUSTINLAZ [RST]",
     "ticker":"AUSTINLAZ",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"AVAIF",
     "ticker":"AVAIF",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"BAPLC [MRF]",
     "ticker":"BAPLC",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"BERGER",
     "ticker":"BERGER",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"BETAGLAS",
     "ticker":"BETAGLAS",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"BUACEMENT",
     "ticker":"BUACEMENT",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"BUAFOODS",
     "ticker":"BUAFOODS",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"CADBURY",
     "ticker":"CADBURY",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"CAP",
     "ticker":"CAP",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"CAVERTON",
     "ticker":"CAVERTON",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"CHAMPION [BLS]",
     "ticker":"CHAMPION",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"CHAMS",
     "ticker":"CHAMS",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"CHELLARAM",
     "ticker":"CHELLARAM",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"CILEASING [MRF]",
     "ticker":"CILEASING",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"CONHALLPLC",
     "ticker":"CONHALLPLC",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"CONOIL [MRF]",
     "ticker":"CONOIL",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"CORNERST [MRF]",
     "ticker":"CORNERST",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"CUSTODIAN",
     "ticker":"CUSTODIAN",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"CUTIX",
     "ticker":"CUTIX",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"CWG",
     "ticker":"CWG",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"DAARCOMM",
     "ticker":"DAARCOMM",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"DANGCEM",
     "ticker":"DANGCEM",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"DANGSUGAR",
     "ticker":"DANGSUGAR",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"DEAPCAP [DWL]",
     "ticker":"DEAPCAP",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"DUNLOP [DIP]",
     "ticker":"DUNLOP",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"EKOCORP [DIP]",
     "ticker":"EKOCORP",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"ELLAHLAKES",
     "ticker":"ELLAHLAKES",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"ENAMELWA",
     "ticker":"ENAMELWA",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"ETERNA",
     "ticker":"ETERNA",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"ETI",
     "ticker":"ETI",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"ETRANZACT",
     "ticker":"ETRANZACT",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"EUNISELL",
     "ticker":"EUNISELL",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"FCMB",
     "ticker":"FCMB",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"FIDELITYBK",
     "ticker":"FIDELITYBK",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"FIDSON",
     "ticker":"FIDSON",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"FIRSTHOLDCO",
     "ticker":"FIRSTHOLDCO",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"FTNCOCOA [RST]",
     "ticker":"FTNCOCOA",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"GEREGU",
     "ticker":"GEREGU",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"GOLDBREW [BMF]",
     "ticker":"GOLDBREW",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"GTCO",
     "ticker":"GTCO",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"GUINEAINS",
     "ticker":"GUINEAINS",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"GUINNESS",
     "ticker":"GUINNESS",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"HMCALL",
     "ticker":"HMCALL",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"HONYFLOUR [BLS]",
     "ticker":"HONYFLOUR",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"IKEJAHOTEL",
     "ticker":"IKEJAHOTEL",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"IMG",
     "ticker":"IMG",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"INFINITY [BLS]",
     "ticker":"INFINITY",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"INTBREW",
     "ticker":"INTBREW",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"INTENEGINS [MRS]",
     "ticker":"INTENEGINS",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"JAIZBANK [MRF]",
     "ticker":"JAIZBANK",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"JAPAULGOLD",
     "ticker":"JAPAULGOLD",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"JBERGER",
     "ticker":"JBERGER",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"JOHNHOLT",
     "ticker":"JOHNHOLT",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"JULI",
     "ticker":"JULI",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"LASACO",
     "ticker":"LASACO",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"LEARNAFRCA",
     "ticker":"LEARNAFRCA",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"LEGENDINT [BLS]",
     "ticker":"LEGENDINT",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"LINKASSURE [MRF]",
     "ticker":"LINKASSURE",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"LIVESTOCK",
     "ticker":"LIVESTOCK",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"LIVINGTRUST",
     "ticker":"LIVINGTRUST",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"MANSARD",
     "ticker":"MANSARD",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"MAYBAKER",
     "ticker":"MAYBAKER",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"MBENEFIT [MRF]",
     "ticker":"MBENEFIT",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"MCNICHOLS",
     "ticker":"MCNICHOLS",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"MECURE",
     "ticker":"MECURE",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"MEYER",
     "ticker":"MEYER",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"MORISON [MRF]",
     "ticker":"MORISON",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"MRS",
     "ticker":"MRS",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"MTNN",
     "ticker":"MTNN",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"MULTITREX [DWL]",
     "ticker":"MULTITREX",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"MULTIVERSE",
     "ticker":"MULTIVERSE",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"NAHCO",
     "ticker":"NAHCO",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"NASCON",
     "ticker":"NASCON",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"NB",
     "ticker":"NB",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"NCR",
     "ticker":"NCR",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"NEIMETH",
     "ticker":"NEIMETH",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"NEM",
     "ticker":"NEM",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"NESTLE",
     "ticker":"NESTLE",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"NGXGROUP",
     "ticker":"NGXGROUP",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"NIDF",
     "ticker":"NIDF",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"NNFM",
     "ticker":"NNFM",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"NOTORE [BMF]",
     "ticker":"NOTORE",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"NPFMCRFBK",
     "ticker":"NPFMCRFBK",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"NSLTECH",
     "ticker":"NSLTECH",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"OANDO [MRF]",
     "ticker":"OANDO",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"OKOMUOIL",
     "ticker":"OKOMUOIL",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"OMATEK",
     "ticker":"OMATEK",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"PHARMDEKO [MRF]",
     "ticker":"PHARMDEKO",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"PREMPAINTS [MRF]",
     "ticker":"PREMPAINTS",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"PRESCO",
     "ticker":"PRESCO",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"PRESTIGE [BMF]",
     "ticker":"PRESTIGE",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"PZ",
     "ticker":"PZ",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"REDSTAREX",
     "ticker":"REDSTAREX",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"REGALINS [MRF]",
     "ticker":"REGALINS",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"RONCHESS",
     "ticker":"RONCHESS",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"ROYALEX [MRF]",
     "ticker":"ROYALEX",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"RTBRISCOE",
     "ticker":"RTBRISCOE",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"SCOA",
     "ticker":"SCOA",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"SEPLAT",
     "ticker":"SEPLAT",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"SFSREIT",
     "ticker":"SFSREIT",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"SKYAVN",
     "ticker":"SKYAVN",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"SMURFIT [MRF]",
     "ticker":"SMURFIT",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"SOVRENINS [MRF]",
     "ticker":"SOVRENINS",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"STACO [DWL]",
     "ticker":"STACO",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"STANBIC",
     "ticker":"STANBIC",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"STDINSURE [DWL]",
     "ticker":"STDINSURE",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"STERLINGNG [MRF]",
     "ticker":"STERLINGNG",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"SUNUASSUR",
     "ticker":"SUNUASSUR",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"TANTALIZER",
     "ticker":"TANTALIZER",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"THOMASWY [MRS]",
     "ticker":"THOMASWY",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"TIP",
     "ticker":"TIP",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"TOTAL",
     "ticker":"TOTAL",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"TRANSCOHOT",
     "ticker":"TRANSCOHOT",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"TRANSCORP",
     "ticker":"TRANSCORP",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"TRANSEXPR [MRF]",
     "ticker":"TRANSEXPR",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"TRANSPOWER",
     "ticker":"TRANSPOWER",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"TRIPPLEG",
     "ticker":"TRIPPLEG",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"UACN",
     "ticker":"UACN",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"UBA",
     "ticker":"UBA",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"UCAP",
     "ticker":"UCAP",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"UHOMREIT",
     "ticker":"UHOMREIT",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"UNILEVER",
     "ticker":"UNILEVER",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"UNIONDICON [DWL]",
     "ticker":"UNIONDICON",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"UNITYBNK [MRF]",
     "ticker":"UNITYBNK",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"UNIVINSURE [MRF]",
     "ticker":"UNIVINSURE",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"UPDC [BLS]",
     "ticker":"UPDC",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"UPDCREIT",
     "ticker":"UPDCREIT",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"UPL",
     "ticker":"UPL",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"VANLEER [DIP]",
     "ticker":"VANLEER",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"VERITASKAP",
     "ticker":"VERITASKAP",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"VFDGROUP",
     "ticker":"VFDGROUP",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"VITAFOAM",
     "ticker":"VITAFOAM",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"WAPCO",
     "ticker":"WAPCO",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"WAPIC [MRF]",
     "ticker":"WAPIC",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-09 00:00:00",
+    "company_name":"WEMABANK",
     "ticker":"WEMABANK",
-    "signal_score":0
-  },
-  {
     "date":"2025-05-09 00:00:00",
-    "ticker":"ZENITHBANK",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"ZENITHBANK",
+    "ticker":"ZENITHBANK",
+    "date":"2025-05-09 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
+    "signal_score":0
+  },
+  {
+    "company_name":"ABBEYBDS",
     "ticker":"ABBEYBDS",
-    "signal_score":1
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
+    "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"ABCTRANS",
     "ticker":"ABCTRANS",
-    "signal_score":1
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
+    "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"ACADEMY",
     "ticker":"ACADEMY",
-    "signal_score":1
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
+    "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"ACCESSCORP",
     "ticker":"ACCESSCORP",
-    "signal_score":1
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
+    "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"AFRINSURE [MRF]",
     "ticker":"AFRINSURE",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"AFRIPRUD",
     "ticker":"AFRIPRUD",
-    "signal_score":1
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
+    "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"AFROMEDIA [MRF]",
     "ticker":"AFROMEDIA",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"AIICO",
     "ticker":"AIICO",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"AIRTELAFRI",
     "ticker":"AIRTELAFRI",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"ALEX [BLS]",
     "ticker":"ALEX",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"ARADEL",
     "ticker":"ARADEL",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"ASOSAVINGS [DWL]",
     "ticker":"ASOSAVINGS",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"AUSTINLAZ [RST]",
     "ticker":"AUSTINLAZ",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"AVAIF",
     "ticker":"AVAIF",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"BAPLC [MRF]",
     "ticker":"BAPLC",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"BERGER",
     "ticker":"BERGER",
-    "signal_score":1
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
+    "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"BETAGLAS",
     "ticker":"BETAGLAS",
-    "signal_score":1
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
+    "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"BUACEMENT",
     "ticker":"BUACEMENT",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"BUAFOODS",
     "ticker":"BUAFOODS",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"CADBURY",
     "ticker":"CADBURY",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"CAP",
     "ticker":"CAP",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"CAVERTON",
     "ticker":"CAVERTON",
-    "signal_score":1
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
+    "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"CHAMPION [BLS]",
     "ticker":"CHAMPION",
-    "signal_score":1
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
+    "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"CHAMS",
     "ticker":"CHAMS",
-    "signal_score":1
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
+    "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"CHELLARAM",
     "ticker":"CHELLARAM",
-    "signal_score":1
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
+    "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"CILEASING [MRF]",
     "ticker":"CILEASING",
-    "signal_score":1
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
+    "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"CONHALLPLC",
     "ticker":"CONHALLPLC",
-    "signal_score":1
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
+    "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"CONOIL [MRF]",
     "ticker":"CONOIL",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"CORNERST [MRF]",
     "ticker":"CORNERST",
-    "signal_score":1
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
+    "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"CUSTODIAN",
     "ticker":"CUSTODIAN",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"CUTIX",
     "ticker":"CUTIX",
-    "signal_score":1
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
+    "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"CWG",
     "ticker":"CWG",
-    "signal_score":1
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
+    "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"DAARCOMM",
     "ticker":"DAARCOMM",
-    "signal_score":1
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
+    "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"DANGCEM",
     "ticker":"DANGCEM",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"DANGSUGAR",
     "ticker":"DANGSUGAR",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"DEAPCAP [DWL]",
     "ticker":"DEAPCAP",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"DUNLOP [DIP]",
     "ticker":"DUNLOP",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"EKOCORP [DIP]",
     "ticker":"EKOCORP",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"ELLAHLAKES",
     "ticker":"ELLAHLAKES",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"ENAMELWA",
     "ticker":"ENAMELWA",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"ETERNA",
     "ticker":"ETERNA",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"ETI",
     "ticker":"ETI",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"ETRANZACT",
     "ticker":"ETRANZACT",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"EUNISELL",
     "ticker":"EUNISELL",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"FCMB",
     "ticker":"FCMB",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"FIDELITYBK",
     "ticker":"FIDELITYBK",
-    "signal_score":1
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
+    "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"FIDSON",
     "ticker":"FIDSON",
-    "signal_score":1
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
+    "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"FIRSTHOLDCO",
     "ticker":"FIRSTHOLDCO",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"FTNCOCOA [RST]",
     "ticker":"FTNCOCOA",
-    "signal_score":1
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
+    "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"GEREGU",
     "ticker":"GEREGU",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"GOLDBREW [BMF]",
     "ticker":"GOLDBREW",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"GTCO",
     "ticker":"GTCO",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"GUINEAINS",
     "ticker":"GUINEAINS",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"GUINNESS",
     "ticker":"GUINNESS",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"HMCALL",
     "ticker":"HMCALL",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"HONYFLOUR [BLS]",
     "ticker":"HONYFLOUR",
-    "signal_score":1
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
+    "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"IKEJAHOTEL",
     "ticker":"IKEJAHOTEL",
-    "signal_score":1
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
+    "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"IMG",
     "ticker":"IMG",
-    "signal_score":1
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
+    "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"INFINITY [BLS]",
     "ticker":"INFINITY",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"INTBREW",
     "ticker":"INTBREW",
-    "signal_score":1
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
+    "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"INTENEGINS [MRS]",
     "ticker":"INTENEGINS",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"JAIZBANK [MRF]",
     "ticker":"JAIZBANK",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"JAPAULGOLD",
     "ticker":"JAPAULGOLD",
-    "signal_score":1
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
+    "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"JBERGER",
     "ticker":"JBERGER",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"JOHNHOLT",
     "ticker":"JOHNHOLT",
-    "signal_score":1
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
+    "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"JULI",
     "ticker":"JULI",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"LASACO",
     "ticker":"LASACO",
-    "signal_score":1
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
+    "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"LEARNAFRCA",
     "ticker":"LEARNAFRCA",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"LEGENDINT [BLS]",
     "ticker":"LEGENDINT",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"LINKASSURE [MRF]",
     "ticker":"LINKASSURE",
-    "signal_score":1
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
+    "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"LIVESTOCK",
     "ticker":"LIVESTOCK",
-    "signal_score":1
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
+    "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"LIVINGTRUST",
     "ticker":"LIVINGTRUST",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"MANSARD",
     "ticker":"MANSARD",
-    "signal_score":1
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
+    "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"MAYBAKER",
     "ticker":"MAYBAKER",
-    "signal_score":1
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
+    "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"MBENEFIT [MRF]",
     "ticker":"MBENEFIT",
-    "signal_score":1
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
+    "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"MCNICHOLS",
     "ticker":"MCNICHOLS",
-    "signal_score":1
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
+    "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"MECURE",
     "ticker":"MECURE",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"MEYER",
     "ticker":"MEYER",
-    "signal_score":1
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
+    "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"MORISON [MRF]",
     "ticker":"MORISON",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"MRS",
     "ticker":"MRS",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"MTNN",
     "ticker":"MTNN",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"MULTITREX [DWL]",
     "ticker":"MULTITREX",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"MULTIVERSE",
     "ticker":"MULTIVERSE",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"NAHCO",
     "ticker":"NAHCO",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"NASCON",
     "ticker":"NASCON",
-    "signal_score":1
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
+    "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"NB",
     "ticker":"NB",
-    "signal_score":1
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
+    "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"NCR",
     "ticker":"NCR",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"NEIMETH",
     "ticker":"NEIMETH",
-    "signal_score":1
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
+    "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"NEM",
     "ticker":"NEM",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"NESTLE",
     "ticker":"NESTLE",
-    "signal_score":1
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
+    "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"NGXGROUP",
     "ticker":"NGXGROUP",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"NIDF",
     "ticker":"NIDF",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"NNFM",
     "ticker":"NNFM",
-    "signal_score":1
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
+    "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"NOTORE [BMF]",
     "ticker":"NOTORE",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"NPFMCRFBK",
     "ticker":"NPFMCRFBK",
-    "signal_score":1
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
+    "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"NSLTECH",
     "ticker":"NSLTECH",
-    "signal_score":1
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
+    "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"OANDO [MRF]",
     "ticker":"OANDO",
-    "signal_score":1
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
+    "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"OKOMUOIL",
     "ticker":"OKOMUOIL",
-    "signal_score":1
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
+    "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"OMATEK",
     "ticker":"OMATEK",
-    "signal_score":1
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
+    "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"PHARMDEKO [MRF]",
     "ticker":"PHARMDEKO",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"PREMPAINTS [MRF]",
     "ticker":"PREMPAINTS",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"PRESCO",
     "ticker":"PRESCO",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"PRESTIGE [BMF]",
     "ticker":"PRESTIGE",
-    "signal_score":1
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
+    "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"PZ",
     "ticker":"PZ",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"REDSTAREX",
     "ticker":"REDSTAREX",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"REGALINS [MRF]",
     "ticker":"REGALINS",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"RONCHESS",
     "ticker":"RONCHESS",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"ROYALEX [MRF]",
     "ticker":"ROYALEX",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"RTBRISCOE",
     "ticker":"RTBRISCOE",
-    "signal_score":1
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
+    "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"SCOA",
     "ticker":"SCOA",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"SEPLAT",
     "ticker":"SEPLAT",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"SFSREIT",
     "ticker":"SFSREIT",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"SKYAVN",
     "ticker":"SKYAVN",
-    "signal_score":1
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
+    "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"SMURFIT [MRF]",
     "ticker":"SMURFIT",
-    "signal_score":1
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
+    "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"SOVRENINS [MRF]",
     "ticker":"SOVRENINS",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"STACO [DWL]",
     "ticker":"STACO",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"STANBIC",
     "ticker":"STANBIC",
-    "signal_score":1
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
+    "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"STDINSURE [DWL]",
     "ticker":"STDINSURE",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"STERLINGNG [MRF]",
     "ticker":"STERLINGNG",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"SUNUASSUR",
     "ticker":"SUNUASSUR",
-    "signal_score":1
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
+    "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"TANTALIZER",
     "ticker":"TANTALIZER",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"THOMASWY [MRS]",
     "ticker":"THOMASWY",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"TIP",
     "ticker":"TIP",
-    "signal_score":1
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
+    "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"TOTAL",
     "ticker":"TOTAL",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"TRANSCOHOT",
     "ticker":"TRANSCOHOT",
-    "signal_score":1
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
+    "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"TRANSCORP",
     "ticker":"TRANSCORP",
-    "signal_score":1
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
+    "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"TRANSEXPR [MRF]",
     "ticker":"TRANSEXPR",
-    "signal_score":1
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
+    "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"TRANSPOWER",
     "ticker":"TRANSPOWER",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"TRIPPLEG",
     "ticker":"TRIPPLEG",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"UACN",
     "ticker":"UACN",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"UBA",
     "ticker":"UBA",
-    "signal_score":1
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
+    "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"UCAP",
     "ticker":"UCAP",
-    "signal_score":1
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
+    "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"UHOMREIT",
     "ticker":"UHOMREIT",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"UNILEVER",
     "ticker":"UNILEVER",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"UNIONDICON [DWL]",
     "ticker":"UNIONDICON",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"UNITYBNK [MRF]",
     "ticker":"UNITYBNK",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"UNIVINSURE [MRF]",
     "ticker":"UNIVINSURE",
-    "signal_score":1
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
+    "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"UPDC [BLS]",
     "ticker":"UPDC",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"UPDCREIT",
     "ticker":"UPDCREIT",
-    "signal_score":1
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
+    "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"UPL",
     "ticker":"UPL",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"VANLEER [DIP]",
     "ticker":"VANLEER",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"VERITASKAP",
     "ticker":"VERITASKAP",
-    "signal_score":1
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
+    "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"VFDGROUP",
     "ticker":"VFDGROUP",
-    "signal_score":1
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
+    "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"VITAFOAM",
     "ticker":"VITAFOAM",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"WAPCO",
     "ticker":"WAPCO",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"WAPIC [MRF]",
     "ticker":"WAPIC",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"WEMABANK",
     "ticker":"WEMABANK",
-    "signal_score":1
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
+    "signal_score":0
   },
   {
-    "date":"2025-05-16 00:00:00",
+    "company_name":"ZENITHBANK",
     "ticker":"ZENITHBANK",
+    "date":"2025-05-16 00:00:00",
+    "rsi":null,
+    "macd":null,
+    "five_day_return":null,
     "signal_score":0
   }
 ]
