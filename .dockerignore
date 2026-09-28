@@ -1,0 +1,9 @@
+.git
+.github
+env
+.venv
+database_setup/env
+**/__pycache__
+**/*.pyc
+site
+database_setup/*.db
