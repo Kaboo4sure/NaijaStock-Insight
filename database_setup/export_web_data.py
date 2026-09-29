@@ -26,6 +26,7 @@ def table_exists(connection, table_name):
 
 def load_stock_data():
     frames = []
+    historical_source = None
 
     if HISTORICAL_DB_PATH.exists():
         with sqlite3.connect(HISTORICAL_DB_PATH) as connection:
@@ -40,6 +41,21 @@ def load_stock_data():
                 )
                 historical["source_priority"] = 0
                 frames.append(historical)
+                historical_source = (
+                    "Favourboi/nigerian-inflation-stock-analysis"
+                )
+    elif (OUTPUT_DIR / "stocks.json").exists():
+        # Daily fetches do not recreate the large temporary historical
+        # database. Reuse the previously exported chart history, then let
+        # current database rows replace matching ticker/date records below.
+        existing = pd.read_json(OUTPUT_DIR / "stocks.json")
+        existing["source_priority"] = 0
+        frames.append(existing)
+
+        metadata_path = OUTPUT_DIR / "metadata.json"
+        if metadata_path.exists():
+            with open(metadata_path, encoding="utf-8") as file:
+                historical_source = json.load(file).get("historical_source")
 
     with sqlite3.connect(DB_PATH) as connection:
         current = pd.read_sql_query("SELECT * FROM stock_data", connection)
@@ -58,7 +74,7 @@ def load_stock_data():
         .sort_values(["date", "ticker"])
         .reset_index(drop=True)
     )
-    return stock_data
+    return stock_data, historical_source
 
 
 def export_data():
@@ -67,7 +83,7 @@ def export_data():
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
-    stock_data = load_stock_data()
+    stock_data, historical_source = load_stock_data()
 
     with sqlite3.connect(DB_PATH) as connection:
         if table_exists(connection, "weekly_signals"):
@@ -110,11 +126,7 @@ def export_data():
         "latest_signal_date": latest_signal_date,
         "stock_records": len(stock_data),
         "signal_records": len(signal_data),
-        "historical_source": (
-            "Favourboi/nigerian-inflation-stock-analysis"
-            if HISTORICAL_DB_PATH.exists()
-            else None
-        ),
+        "historical_source": historical_source,
         "chart_rows_per_ticker": MAX_CHART_ROWS_PER_TICKER,
     }
 
