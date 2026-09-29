@@ -140,6 +140,7 @@ def generate_signals(dataframe):
 
     for ticker, group in dataframe.groupby("ticker"):
         group = group.copy()
+        group["trading_date"] = group["date"]
 
         group["five_day_return"] = (
             group["close"].pct_change(5) * 100
@@ -173,9 +174,12 @@ def generate_signals(dataframe):
             .copy()
         )
 
+        # W-FRI labels an incomplete week with its upcoming Friday. Use the
+        # last actual trading date instead so signals are never future-dated.
+        weekly["date"] = weekly.pop("trading_date")
         weekly["ticker"] = ticker
         weekly["company_name"] = group["company_name"].iloc[-1]
-        weekly = weekly.reset_index()
+        weekly = weekly.reset_index(drop=True)
 
         all_signals.append(
             weekly[
