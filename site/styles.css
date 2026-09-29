@@ -19,6 +19,7 @@
 
 body {
     margin: 0;
+    overflow-x: hidden;
     background: var(--background);
     color: var(--text);
     font-family: Arial, Helvetica, sans-serif;
@@ -49,11 +50,13 @@ body {
     display: flex;
     align-items: center;
     gap: 9px;
-    white-space: nowrap;
+    max-width: 560px;
+    white-space: normal;
     font-size: 0.9rem;
 }
 
 .status-dot {
+    flex: 0 0 auto;
     width: 10px;
     height: 10px;
     border-radius: 50%;
@@ -168,6 +171,7 @@ select:focus,
 .table-container {
     width: 100%;
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 table {
@@ -274,29 +278,80 @@ footer {
     }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 700px) {
     .site-header {
         align-items: flex-start;
         flex-direction: column;
+        gap: 16px;
+        padding: 22px 16px;
+    }
+
+    .site-header h1 {
+        font-size: clamp(1.65rem, 8vw, 2.1rem);
+        line-height: 1.15;
+    }
+
+    .update-status {
+        align-items: flex-start;
+        font-size: 0.82rem;
     }
 
     .dashboard {
-        width: min(100% - 24px, 1400px);
-        margin-top: 16px;
+        width: min(100% - 20px, 1400px);
+        margin: 12px auto;
     }
 
     .metric-grid {
-        grid-template-columns: 1fr;
-        gap: 12px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        margin-bottom: 12px;
+    }
+
+    .metric-card {
+        min-width: 0;
+        padding: 14px;
+        border-radius: 12px;
+    }
+
+    .metric-card span {
+        min-height: 2.5em;
+        margin-bottom: 5px;
+        font-size: 0.75rem;
+        line-height: 1.25;
+    }
+
+    .metric-card strong {
+        display: block;
+        overflow-wrap: anywhere;
+        font-size: clamp(1rem, 5vw, 1.3rem);
     }
 
     .panel {
-        padding: 16px;
+        margin-bottom: 12px;
+        padding: 14px;
+        border-radius: 12px;
+    }
+
+    .controls-panel {
+        gap: 14px;
+    }
+
+    select,
+    .search-input,
+    .download-button {
+        min-height: 48px;
+        font-size: 16px;
     }
 
     .section-heading {
         align-items: stretch;
         flex-direction: column;
+        gap: 12px;
+        margin-bottom: 14px;
+    }
+
+    .section-heading h2 {
+        font-size: 1.1rem;
     }
 
     .search-input {
@@ -304,6 +359,99 @@ footer {
     }
 
     .chart {
-        min-height: 360px;
+        min-height: 330px;
+    }
+
+    .table-container {
+        overflow: visible;
+    }
+
+    .table-container table,
+    .table-container tbody,
+    .table-container tr,
+    .table-container td {
+        display: block;
+        width: 100%;
+    }
+
+    .table-container thead {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip-path: inset(50%);
+        white-space: nowrap;
+    }
+
+    .table-container tbody {
+        display: grid;
+        gap: 12px;
+    }
+
+    .table-container tbody tr {
+        padding: 4px 12px;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        background: #ffffff;
+        box-shadow: 0 3px 12px rgba(17, 46, 31, 0.05);
+    }
+
+    .table-container tbody tr:hover {
+        background: #ffffff;
+    }
+
+    .table-container tbody td {
+        display: grid;
+        grid-template-columns: minmax(100px, 42%) minmax(0, 1fr);
+        align-items: center;
+        gap: 10px;
+        padding: 9px 0;
+        border-bottom: 1px solid var(--border);
+        text-align: right;
+        white-space: normal;
+        overflow-wrap: anywhere;
+    }
+
+    .table-container tbody td::before {
+        content: attr(data-label);
+        color: var(--muted);
+        font-size: 0.7rem;
+        font-weight: 800;
+        letter-spacing: 0.03em;
+        text-align: left;
+        text-transform: uppercase;
+    }
+
+    .table-container tbody td:last-child {
+        border-bottom: 0;
+    }
+
+    .table-container tbody td[colspan] {
+        display: block;
+        padding: 18px 0;
+        border-bottom: 0;
+        text-align: center;
+    }
+
+    .table-container tbody td[colspan]::before {
+        display: none;
+    }
+
+    .download-button {
+        width: 100%;
+    }
+
+    footer {
+        padding: 20px 14px;
+    }
+}
+
+@media (max-width: 340px) {
+    .metric-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .metric-card span {
+        min-height: 0;
     }
 }

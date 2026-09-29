@@ -2,6 +2,8 @@ let stockData = [];
 let signalData = [];
 let metadata = {};
 let latestPrices = [];
+const mobileViewport = window.matchMedia("(max-width: 700px)");
+let previousMobileLayout = mobileViewport.matches;
 
 const elements = {
     latestDate: document.getElementById("latestDate"),
@@ -169,6 +171,7 @@ function updateMetrics() {
 function renderChart() {
     const selectedTicker = elements.companySelect.value;
     const selectedChartType = elements.chartType.value;
+    const isMobile = mobileViewport.matches;
 
     const history = stockData
         .filter((record) => record.ticker === selectedTicker)
@@ -207,7 +210,7 @@ function renderChart() {
         traces = [
             {
                 type: "scatter",
-                mode: "lines+markers",
+                mode: isMobile ? "lines" : "lines+markers",
                 x: history.map((record) => normalizeDate(record.date)),
                 y: history.map((record) => numberValue(record.close)),
                 name: "Closing price",
@@ -223,26 +226,30 @@ function renderChart() {
     }
 
     const layout = {
-        margin: {
-            top: 20,
-            right: 25,
-            bottom: 55,
-            left: 65
-        },
+        autosize: true,
+        height: isMobile ? 330 : 460,
+        margin: isMobile
+            ? { top: 10, right: 8, bottom: 42, left: 48 }
+            : { top: 20, right: 25, bottom: 55, left: 65 },
         paper_bgcolor: "#ffffff",
         plot_bgcolor: "#ffffff",
         xaxis: {
-            title: "Trading date",
+            title: isMobile ? "" : "Trading date",
             gridcolor: "#e7eeea",
+            automargin: true,
+            nticks: isMobile ? 5 : undefined,
+            tickfont: { size: isMobile ? 10 : 12 },
             rangeslider: {
-                visible: selectedChartType === "candlestick"
+                visible: selectedChartType === "candlestick" && !isMobile
             }
         },
         yaxis: {
-            title: "Price (NGN)",
-            gridcolor: "#e7eeea"
+            title: isMobile ? "" : "Price (NGN)",
+            gridcolor: "#e7eeea",
+            automargin: true,
+            tickfont: { size: isMobile ? 10 : 12 }
         },
-        showlegend: selectedChartType === "line"
+        showlegend: selectedChartType === "line" && !isMobile
     };
 
     Plotly.newPlot(
@@ -251,7 +258,9 @@ function renderChart() {
         layout,
         {
             responsive: true,
-            displaylogo: false
+            displaylogo: false,
+            displayModeBar: !isMobile,
+            scrollZoom: false
         }
     );
 }
@@ -347,16 +356,19 @@ function renderStockTable() {
             const changePrefix =
                 record.percentageChange > 0 ? "+" : "";
 
+            const changeLabel =
+                `${elements.changePeriod.value}-Day Change`;
+
             return `
                 <tr>
-                    <td>${escapeHtml(record.company_name || record.ticker)}</td>
-                    <td>${escapeHtml(record.ticker)}</td>
-                    <td>₦${formatPrice(record.open)}</td>
-                    <td>₦${formatPrice(record.high)}</td>
-                    <td>₦${formatPrice(record.low)}</td>
-                    <td>₦${formatPrice(record.close)}</td>
-                    <td>${formatVolume(record.volume)}</td>
-                    <td class="${changeClass}">
+                    <td data-label="Company">${escapeHtml(record.company_name || record.ticker)}</td>
+                    <td data-label="Ticker">${escapeHtml(record.ticker)}</td>
+                    <td data-label="Open">₦${formatPrice(record.open)}</td>
+                    <td data-label="High">₦${formatPrice(record.high)}</td>
+                    <td data-label="Low">₦${formatPrice(record.low)}</td>
+                    <td data-label="Close">₦${formatPrice(record.close)}</td>
+                    <td data-label="Volume">${formatVolume(record.volume)}</td>
+                    <td data-label="${changeLabel}" class="${changeClass}">
                         ${changePrefix}${record.percentageChange.toFixed(2)}%
                     </td>
                 </tr>
@@ -398,19 +410,19 @@ function renderSignalTable() {
 
             return `
                 <tr>
-                    <td>${escapeHtml(record.company_name || record.ticker)}</td>
-                    <td>${escapeHtml(record.ticker)}</td>
-                    <td>${escapeHtml(normalizeDate(record.date))}</td>
-                    <td>${formatIndicator(record.rsi)}</td>
-                    <td>${formatIndicator(record.macd)}</td>
-                    <td class="${
+                    <td data-label="Company">${escapeHtml(record.company_name || record.ticker)}</td>
+                    <td data-label="Ticker">${escapeHtml(record.ticker)}</td>
+                    <td data-label="Date">${escapeHtml(normalizeDate(record.date))}</td>
+                    <td data-label="RSI">${formatIndicator(record.rsi)}</td>
+                    <td data-label="MACD">${formatIndicator(record.macd)}</td>
+                    <td data-label="5-Day Return" class="${
                         numberValue(record.five_day_return) >= 0
                             ? "positive"
                             : "negative"
                     }">
                         ${formatIndicator(record.five_day_return)}%
                     </td>
-                    <td>
+                    <td data-label="Signal">
                         <span class="${isBuy ? "signal-buy" : "signal-hold"}">
                             ${isBuy ? "BUY" : "HOLD"}
                         </span>
@@ -479,6 +491,23 @@ function attachEventListeners() {
         "click",
         downloadLatestSignals
     );
+
+    let resizeTimer;
+
+    window.addEventListener("resize", () => {
+        clearTimeout(resizeTimer);
+
+        resizeTimer = setTimeout(() => {
+            const isMobile = mobileViewport.matches;
+
+            if (isMobile !== previousMobileLayout) {
+                previousMobileLayout = isMobile;
+                renderChart();
+            } else if (window.Plotly) {
+                Plotly.Plots.resize("priceChart");
+            }
+        }, 150);
+    });
 }
 
 function showError(message) {
