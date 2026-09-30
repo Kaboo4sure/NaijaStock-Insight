@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-29T21:07:51.348628+00:00",
-  "latest_stock_date": "2026-09-29",
+  "generated_at": "2026-09-30T21:05:28.731860+00:00",
+  "latest_stock_date": "2026-09-30",
   "latest_signal_date": "2026-09-28",
-  "stock_records": 37569,
+  "stock_records": 37582,
   "signal_records": 5304,
   "historical_source": "Favourboi/nigerian-inflation-stock-analysis",
   "chart_rows_per_ticker": 260
